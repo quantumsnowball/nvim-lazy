@@ -12,5 +12,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- global leader key
+vim.g.mapleader = ','
+
 -- lazy.nvim setup
 require("lazy").setup("plugins")
+
+-- other nvim settings
+require('settings')
