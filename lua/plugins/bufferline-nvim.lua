@@ -1,7 +1,7 @@
 -- buffer tabs
 -- https://github.com/akinsho/bufferline.nvim
 return {
-    'akinsho/bufferline.nvim', tag = "v2.*",
+    'akinsho/bufferline.nvim',
     dependencies = {
         'kyazdani42/nvim-web-devicons'
     },
