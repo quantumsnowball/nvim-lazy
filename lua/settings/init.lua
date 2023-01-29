@@ -8,3 +8,4 @@ vim.cmd 'set clipboard^=unnamed,unnamedplus'
 require('settings.general')
 require('settings.clipboard')
 require('settings.editing')
+require('settings.configs')
