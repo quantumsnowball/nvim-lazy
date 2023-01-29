@@ -3,7 +3,7 @@ local map = require('utils').map
 -- general --
 -------------
 -- lazy.nvim plugin manager quick launch
-map('n', '<leader>z', ':Lazy<cr>')
+map('n', '<leader>L', ':Lazy<cr>')
 -- quick save buffer
 map('n', '<c-s>', ':w<cr>')
 map('i', '<c-s>', '<c-o>:w<cr>')
