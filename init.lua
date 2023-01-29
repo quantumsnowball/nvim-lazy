@@ -1,4 +1,4 @@
--- lazy load
+-- bootstrap lazy load
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,11 +12,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- as required by many plugins, should load before all plugins
+vim.opt.termguicolors = true
+
 -- global leader key
 vim.g.mapleader = ','
 
+
 -- lazy.nvim setup
 require("lazy").setup("plugins")
+
 
 -- other nvim settings
 require('settings')
