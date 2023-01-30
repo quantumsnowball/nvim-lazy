@@ -16,7 +16,7 @@ return {
     {
         "williamboman/mason.nvim",
         cmd = "Mason",
-        keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
+        keys = { { "<leader>M", "<cmd>Mason<cr>", desc = "Mason" } },
         config = function()
             require("mason").setup()
         end,
@@ -25,19 +25,17 @@ return {
     -- https://github.com/williamboman/mason-lspconfig.nvim
     {
         "williamboman/mason-lspconfig.nvim",
-        event = "BufReadPre",
+        keys = {
+            { '<leader>fd', vim.lsp.buf.format, desc = 'lsp.buf.format()' },
+        },
         config = function()
             local list = require('plugins.nvim-lspconfig.constants').ensure_installed
             require("mason-lspconfig").setup { ensure_installed = list }
 
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-            require("lspconfig").sumneko_lua.setup {
-                capabilities = caps,
-                settings = require('plugins.nvim-lspconfig.sumneko_lua')
-            }
 
-            local map = require('utils').map
-            map('n', '<leader>fd', vim.lsp.buf.format)
+            require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)
+
         end,
     }
 }
