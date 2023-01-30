@@ -2,6 +2,7 @@
 -- https://github.com/kdheepak/lazygit.nvim
 return {
     'kdheepak/lazygit.nvim',
+    event = 'VeryLazy',
     keys = {
         { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
         { '<leader>c', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
