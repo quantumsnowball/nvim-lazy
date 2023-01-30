@@ -27,14 +27,16 @@ return {
         "williamboman/mason-lspconfig.nvim",
         keys = require('plugins.nvim-lspconfig.keymaps'),
         config = function()
+            -- auto install some servers
             local list = require('plugins.nvim-lspconfig.constants').ensure_installed
             require("mason-lspconfig").setup { ensure_installed = list }
-
             -- update server capabilities
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
             -- lsp server settings
             require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)
             require('plugins.nvim-lspconfig.langs.pyright')(caps)
-        end,
+            -- auto format document on save
+            vim.cmd('autocmd BufWritePre * silent! lua vim.lsp.buf.format({async=false})')
+        end
     }
 }

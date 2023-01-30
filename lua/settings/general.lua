@@ -5,10 +5,10 @@ local map = require('utils').map
 -- lazy.nvim plugin manager quick launch
 map('n', '<leader>L', ':Lazy<cr>')
 -- quick save buffer
-map('n', '<c-s>', ':w<cr>')
+map('n', '<c-s>', ':noautocmd w<cr>')
 map('i', '<c-s>', '<c-o>:w<cr>')
 map('v', '<c-s>', '<esc>:w<cr>')
-map('n', 'qs', ':noautocmd w<cr>')
+map('n', 'qs', ':w<cr>')
 -- quit windo shortcut
 map('n', 'qw', ':q<cr>')
 map('n', 'qW', ':qa<cr>')
