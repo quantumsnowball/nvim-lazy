@@ -30,6 +30,7 @@ return {
             local list = require('plugins.nvim-lspconfig.constants').ensure_installed
             require("mason-lspconfig").setup { ensure_installed = list }
 
+            -- update server capabilities
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
             require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)

@@ -8,10 +8,16 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+        'L3MON4D3/LuaSnip',
     },
     opts = function()
         local cmp = require("cmp")
         return {
+            snippet = {
+                expand = function(args)
+                    require('luasnip').lsp_expand(args.body)
+                end,
+            },
             completion = {
                 completeopt = "menu,menuone,noinsert",
             },
@@ -26,6 +32,7 @@ return {
                 { name = "nvim_lsp" },
                 { name = "buffer" },
                 { name = "path" },
+                { name = 'luasnip' },
             }),
             formatting = {
                 format = function(_, item)
@@ -39,4 +46,3 @@ return {
         }
     end
 }
-
