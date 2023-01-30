@@ -1,3 +1,5 @@
+-- move lines or block of code
+-- https://github.com/fedepujol/move.nvim
 return {
     'fedepujol/move.nvim',
     config = function()

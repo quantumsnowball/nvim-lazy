@@ -1,4 +1,5 @@
-  -- active indent guide and indent text objects
+-- active indent guide and indent text objects
+-- https://github.com/echasnovski/mini.indentscope
 return {
     "echasnovski/mini.indentscope",
     version = false, -- wait till new 0.7.0 release to put it back on semver

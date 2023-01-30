@@ -1,3 +1,5 @@
+-- auto insert pairs of quotes
+-- https://github.com/echasnovski/mini.pairs
 return {
     'echasnovski/mini.pairs',
     event = 'VeryLazy',
