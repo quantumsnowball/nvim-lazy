@@ -3,7 +3,8 @@ local map = require('utils').map
 -- clipboard --
 ---------------
 -- swap ; :
-map('n', ';', ':')
+-- map('n', ';', ':')
+map('n', ';', '<cmd>call feedkeys(":")<cr>')
 -- delete
 map('n', 'x', '"_x')
 map('v', 'x', '"_x')
