@@ -3,7 +3,7 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    event = 'VeryLazy',
+    event = 'BufReadPost',
     config = function()
         require('nvim-treesitter.configs').setup {
             ensure_installed = 'all',
