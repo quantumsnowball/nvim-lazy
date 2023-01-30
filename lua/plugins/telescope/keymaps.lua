@@ -93,10 +93,3 @@ map('n', '<leader>fp', tb.builtin, {}, 'telescope.builtin()')
 -- list vim options
 map('n', '<leader>fo', tb.vim_options, {}, 'telescope.vim_options()')
 
---------------------
--- other keymspas --
---------------------
-map('n', 'qfo', ':copen<cr>')
-map('n', 'qfc', ':cclose<cr>')
-map('n', 'qfj', ':cnext<cr>')
-map('n', 'qfk', ':cprev<cr>')

@@ -29,3 +29,8 @@ map({ 'n', 'v' }, '<leader>q', 'q')
 map({ 'n', 'v' }, 'q', '<Nop>')
 -- toggle word wrap
 map('n', 'gw', ':set wrap!<cr>')
+-- quick fix list --
+map('n', 'qfo', ':copen<cr>')
+map('n', 'qfc', ':cclose<cr>')
+map('n', 'qfj', ':cnext<cr>')
+map('n', 'qfk', ':cprev<cr>')
