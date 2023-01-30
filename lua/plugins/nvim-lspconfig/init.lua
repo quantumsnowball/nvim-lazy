@@ -32,8 +32,9 @@ return {
 
             -- update server capabilities
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
+            -- lsp server settings
             require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)
+            require('plugins.nvim-lspconfig.langs.pyright')(caps)
         end,
     }
 }
