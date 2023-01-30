@@ -32,9 +32,20 @@ return {
             require("mason-lspconfig").setup { ensure_installed = list }
             -- update server capabilities
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+            --
             -- lsp server settings
-            require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)
-            require('plugins.nvim-lspconfig.langs.pyright')(caps)
+            --
+            -- 1. use Mason to install the server
+            -- 2. add the correct name to this lise
+            -- 3. to provide extra configs, create a module with the exact name and return the table
+            local selected = {
+                'pyright',
+                'pylsp',
+                'sumneko_lua',
+            }
+            for _, name in pairs(selected) do
+                require('plugins.nvim-lspconfig.lsp')(name, caps)
+            end
             -- auto format document on save
             vim.cmd('autocmd BufWritePre * silent! lua vim.lsp.buf.format({async=false})')
         end
