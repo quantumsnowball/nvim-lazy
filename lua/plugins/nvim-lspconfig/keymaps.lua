@@ -1,0 +1,20 @@
+-- lsp  related keymaps
+return {
+    { '<leader>fd', vim.lsp.buf.format, desc = 'lsp.buf.format()' },
+    { 'gD', vim.lsp.buf.declaration, desc = 'lsp.buf.declaration()' },
+    { 'gd', vim.lsp.buf.definition, desc = 'lsp.buf.definition()' },
+    { 'K', vim.lsp.buf.hover, desc = 'lsp.buf.hover()' },
+    { 'gi', vim.lsp.buf.implementation, desc = 'lsp.buf.implementation()' },
+    { 'zk', vim.lsp.buf.signature_help, desc = 'lsp.buf.signature_help()' },
+    { '<C-k>', vim.lsp.buf.signature_help, desc = 'lsp.buf.signature_help()', mode = 'i' },
+    { '<space>wa', vim.lsp.buf.add_workspace_folder, desc = 'lsp.buf.add_workspace_folder()' },
+    { '<space>wr', vim.lsp.buf.remove_workspace_folder, desc = 'lsp.buf.remove_workspace_folder()' },
+    { '<space>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
+        'lsp.buf.list_workspace_folders()' },
+    { '<space>D', vim.lsp.buf.type_definition, desc = 'lsp.buf.type_definition()' },
+    { '<space>rn', vim.lsp.buf.rename, desc = 'lsp.buf.rename()' },
+    { '<space>qf', vim.lsp.buf.code_action, desc = 'lsp.buf.code_action()' },
+    { 'gr', vim.lsp.buf.references, desc = 'lsp.buf.references()' },
+    { '<space>f', vim.lsp.buf.format, desc = 'lsp.buf.formatting()' },
+    { '<leader>fd', vim.lsp.buf.format, desc = 'lsp.buf.formatting()' },
+}

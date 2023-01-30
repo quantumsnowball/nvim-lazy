@@ -25,9 +25,7 @@ return {
     -- https://github.com/williamboman/mason-lspconfig.nvim
     {
         "williamboman/mason-lspconfig.nvim",
-        keys = {
-            { '<leader>fd', vim.lsp.buf.format, desc = 'lsp.buf.format()' },
-        },
+        keys = require('plugins.nvim-lspconfig.keymaps'),
         config = function()
             local list = require('plugins.nvim-lspconfig.constants').ensure_installed
             require("mason-lspconfig").setup { ensure_installed = list }
@@ -35,7 +33,6 @@ return {
             local caps = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
             require('plugins.nvim-lspconfig.langs.sumneko_lua')(caps)
-
         end,
     }
 }
