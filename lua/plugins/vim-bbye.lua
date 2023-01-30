@@ -12,7 +12,6 @@ return {
         -- close all and other buffer by close-buffers.nvim
         local delete = require('close_buffers').delete
         local close_all_buffers = function()
-            vim.cmd('NvimTreeClose')
             vim.cmd('Alpha')
             vim.cmd('tabonly')
             delete({ type = 'other' })

@@ -4,6 +4,9 @@ return {
     'kyazdani42/nvim-tree.lua', 
     tag = 'nightly',
     dependencies = 'kyazdani42/nvim-web-devicons',
+    keys = {
+        { '<leader>e', '<cmd>NvimTreeToggle .<cr>', desc = 'NvimTreeToggle' },
+    },
     config = function()
         require('nvim-tree').setup {
             actions = {
@@ -36,7 +39,5 @@ return {
             filters = { dotfiles = true },
             git = { ignore = true }
         }
-        -- toggle keymap
-        require('utils').map('n', '<leader>e', ':NvimTreeToggle .<CR>', { silent = true })
     end
 }
