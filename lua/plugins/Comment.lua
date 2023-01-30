@@ -8,4 +8,3 @@ return {
         vim.cmd 'nmap <leader>/ gcc'
     end
 }
-

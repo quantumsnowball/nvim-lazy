@@ -24,4 +24,3 @@ return {
         map('v', '<C-l>', ':MoveHBlock(1)<CR>', opts)
     end
 }
-

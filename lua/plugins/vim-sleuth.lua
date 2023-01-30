@@ -11,4 +11,3 @@ return {
         vim.opt.expandtab = true
     end
 }
-

@@ -9,4 +9,3 @@ return {
         require('utils').map('n', '<leader>gl', ':Git pull<cr>', {})
     end
 }
-

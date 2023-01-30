@@ -41,4 +41,3 @@ return {
         require('alpha').setup(dashboard.opts)
     end
 }
-

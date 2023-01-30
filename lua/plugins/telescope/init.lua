@@ -12,4 +12,3 @@ return {
         require('plugins.telescope.keymaps')
     end
 }
-

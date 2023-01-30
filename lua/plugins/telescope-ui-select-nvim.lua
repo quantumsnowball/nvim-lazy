@@ -10,4 +10,3 @@ return {
         tele.load_extension("ui-select")
     end
 }
-

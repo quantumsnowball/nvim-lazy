@@ -18,4 +18,3 @@ return {
         background_colour = "#ffffff",
     },
 }
-

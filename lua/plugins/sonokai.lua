@@ -1,6 +1,6 @@
 -- colorful editor theme
 -- https://github.com/sainnhe/sonokai
-return { 
+return {
     'sainnhe/sonokai',
     config = function()
         -- enable the theme and choose the variant
@@ -30,3 +30,4 @@ return {
         require('which-key').register({ ['<F3>'] = 'toggle_colorscheme()' })
     end
 }
+

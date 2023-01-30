@@ -14,4 +14,3 @@ end
 
 local map = require('utils').map
 map('n', 'gm', toggleMaximize)
-

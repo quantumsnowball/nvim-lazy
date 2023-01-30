@@ -92,4 +92,3 @@ map('n', '<leader>fp', tb.builtin, {}, 'telescope.builtin()')
 
 -- list vim options
 map('n', '<leader>fo', tb.vim_options, {}, 'telescope.vim_options()')
-
