@@ -6,7 +6,7 @@ return {
         { 'kyazdani42/nvim-web-devicons', opt = true },
         'nvim-lua/lsp-status.nvim' -- TODO
     },
-    
+    event = 'VeryLazy',
     config = function()
         require('lualine').setup {
             options = {

@@ -2,6 +2,7 @@
 -- https://github.com/p00f/nvim-ts-rainbow.git
 return {
     'p00f/nvim-ts-rainbow',
+    event = 'VeryLazy',
     config = function()
         require("nvim-treesitter.configs").setup {
             highlight = {},
