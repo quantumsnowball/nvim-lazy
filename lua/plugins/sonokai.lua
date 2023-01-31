@@ -7,7 +7,7 @@ return {
         -- options:
         --   default, atlantis, andromeda, shusia, maia, espresso
         vim.g.sonokai_style = 'andromeda'
-        -- vim.g.sonokai_better_performance = 1
+        vim.g.sonokai_better_performance = 1
         vim.cmd('colorscheme sonokai')
         -- toggle theme variants helper
         local current = 3
@@ -30,4 +30,3 @@ return {
         require('which-key').register({ ['<F3>'] = 'toggle_colorscheme()' })
     end
 }
-
