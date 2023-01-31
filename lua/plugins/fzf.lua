@@ -6,4 +6,3 @@ return {
         vim.fn['fzf#install']()
     end
 }
-

@@ -13,4 +13,3 @@ return {
         map('n', '<C-l>', ':TmuxNavigateRight<cr>', opts)
     end
 }
-

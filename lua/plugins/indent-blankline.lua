@@ -20,4 +20,3 @@ return {
         vim.opt.breakindent = true
     end
 }
-

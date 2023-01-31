@@ -19,4 +19,3 @@ return {
         vim.opt.foldlevel = 10
     end
 }
-

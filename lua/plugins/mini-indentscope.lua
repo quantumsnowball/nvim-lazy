@@ -14,9 +14,8 @@ return {
             pattern = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy", "mason", "NvimTree" },
             callback = function()
                 vim.b.miniindentscope_disable = true
-            end,     
+            end,
         })
         require("mini.indentscope").setup(opts)
     end,
 }
-

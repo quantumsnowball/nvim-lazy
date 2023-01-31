@@ -35,4 +35,3 @@ vim.cmd('autocmd VimEnter,ColorScheme * hi BufferLineTabSelected guifg=Black gui
 vim.cmd('autocmd VimEnter,ColorScheme * hi BufferLineTabClose guifg=White')
 -- list help buffer
 vim.cmd('autocmd FileType help set buflisted')
-

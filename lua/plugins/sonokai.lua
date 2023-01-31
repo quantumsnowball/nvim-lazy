@@ -1,13 +1,14 @@
 -- colorful editor theme
 -- https://github.com/sainnhe/sonokai
-return { 
+return {
     'sainnhe/sonokai',
+    enabled = false,
     config = function()
         -- enable the theme and choose the variant
         -- options:
         --   default, atlantis, andromeda, shusia, maia, espresso
         vim.g.sonokai_style = 'andromeda'
-        -- vim.g.sonokai_better_performance = 1
+        vim.g.sonokai_better_performance = 1
         vim.cmd('colorscheme sonokai')
         -- toggle theme variants helper
         local current = 3

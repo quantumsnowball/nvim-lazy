@@ -7,4 +7,3 @@ return {
         require('mini.pairs').setup(opts)
     end,
 }
-

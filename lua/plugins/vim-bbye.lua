@@ -29,4 +29,3 @@ return {
         map('n', 'qo', close_other_tabpages, nil, 'close_other_tabpages()')
     end
 }
-

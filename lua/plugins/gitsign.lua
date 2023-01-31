@@ -43,4 +43,3 @@ return {
         vim.opt.cursorcolumn = true
     end
 }
-

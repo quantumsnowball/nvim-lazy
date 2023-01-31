@@ -55,4 +55,3 @@ return {
         map('n', 'qc', ':cclose<cr>', {}, 'quickfix_list.close()')
     end
 }
-

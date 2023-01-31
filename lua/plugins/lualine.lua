@@ -4,7 +4,7 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = {
         { 'kyazdani42/nvim-web-devicons', opt = true },
-        'nvim-lua/lsp-status.nvim' -- TODO
+        'nvim-lua/lsp-status.nvim'
     },
     event = 'VeryLazy',
     config = function()
@@ -20,7 +20,7 @@ return {
             },
             sections = {
                 lualine_c = { { 'filename', path = 1 } },
-                lualine_x = {  
+                lualine_x = {
                     -- {
                     --     require("noice").api.status.message.get_hl,
                     --     cond = require("noice").api.status.message.has,
@@ -60,4 +60,3 @@ return {
         vim.opt.showmode = false
     end
 }
-

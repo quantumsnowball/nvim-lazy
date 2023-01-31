@@ -5,10 +5,10 @@ local map = require('utils').map
 -- lazy.nvim plugin manager quick launch
 map('n', '<leader>L', ':Lazy<cr>')
 -- quick save buffer
-map('n', '<c-s>', ':w<cr>')
+map('n', '<c-s>', ':noautocmd w<cr>')
 map('i', '<c-s>', '<c-o>:w<cr>')
 map('v', '<c-s>', '<esc>:w<cr>')
-map('n', 'qs', ':noautocmd w<cr>')
+map('n', 'qs', ':w<cr>')
 -- quit windo shortcut
 map('n', 'qw', ':q<cr>')
 map('n', 'qW', ':qa<cr>')
@@ -21,7 +21,7 @@ map('n', 'g\\', ':vsplit<cr>')
 -- toggle a new tabpage
 map('n', '<F12>', ':tabnew<cr>')
 -- cancel search highlight after search
-map('n', 'znn', ':noh<cr>', {}, 'Clear search result highlight')
+map('n', 'zn', ':noh<cr>', {}, 'Clear search result highlight')
 -- G also center line
 map('n', 'G', 'Gzz')
 -- <leader>Q records macro, q is free
