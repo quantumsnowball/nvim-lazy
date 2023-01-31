@@ -1,33 +1,44 @@
 local tb = require('telescope.builtin')
 local map = require('utils').map
 
+--
+-- most common
+-- should be as handy as possible, and not sharing a prefix with other combos
+--
+-- files
+map('n', '<leader>f', function() tb.find_files({ hidden = true }) end, {}, 'telescope.find_files()')
+-- grep
+map('n', '<leader>w', function()
+    tb.live_grep({ additional_args = function() return { "--hidden" } end })
+end, {}, 'telescope.live_grep()')
+
+--
+-- less common pickers
+-- propose to start with ,F to give way to fastest ,f
+--
 -- general operation
-map('n', '<leader>f.', tb.resume, {}, 'telescope.resume()')
-map('n', '<leader>f/', tb.pickers, {}, 'telescope.pickers()')
+map('n', '<leader>F.', tb.resume, {}, 'telescope.resume()')
+map('n', '<leader>F/', tb.pickers, {}, 'telescope.pickers()')
 
 -- find files
-map('n', '<leader>ff', function() tb.find_files({ hidden = true }) end, {}, 'telescope.find_files()')
-map('n', '<leader>fnf', tb.find_files, {}, 'telescope.find_files(--no-hidden)')
-map('n', '<leader>faf', function() tb.find_files({ hidden = true, no_ignore = true }) end, {},
+map('n', '<leader>Fnf', tb.find_files, {}, 'telescope.find_files(--no-hidden)')
+map('n', '<leader>Faf', function() tb.find_files({ hidden = true, no_ignore = true }) end, {},
     'telescope.find_files(--everything)')
 
 -- find words
-map('n', '<leader>fw', function()
-    tb.live_grep({ additional_args = function() return { "--hidden" } end })
-end, {}, 'telescope.live_grep()')
-map('n', '<leader>fnw', tb.live_grep, {}, 'telescope.live_grep(--no-hidden)')
-map('n', '<leader>faw', function()
+map('n', '<leader>Fnw', tb.live_grep, {}, 'telescope.live_grep(--no-hidden)')
+map('n', '<leader>Faw', function()
     tb.live_grep({ additional_args = function() return { "--hidden", "--no-ignore" } end })
 end, {}, 'telescope.live_grep(--everything)')
 
 -- find recent files
-map('n', '<leader>fr', function()
+map('n', '<leader>Fr', function()
     tb.oldfiles({ only_cwd = true })
 end, {}, 'telescope.oldfiles()')
 
 -- find buffers
 map('n', '<leader>b', tb.buffers, {}, 'telescope.buffers()')
-map('n', '<leader>fb', function()
+map('n', '<leader>Fb', function()
     tb.buffers({ initial_mode = 'insert' })
 end, {}, 'telescope.buffers()')
 
@@ -35,17 +46,17 @@ end, {}, 'telescope.buffers()')
 -- map('n', 'T', tb.tabpages, {}, 'telescope.tabpages()')
 
 -- find helps
-map('n', '<leader>fh', tb.help_tags, {}, 'telescope.help_tags()')
+map('n', '<leader>Fh', tb.help_tags, {}, 'telescope.help_tags()')
 
 -- find jumplist
-map('n', '<leader>fj', tb.jumplist, {}, 'telescope.jumplist()')
+map('n', '<leader>Fj', tb.jumplist, {}, 'telescope.jumplist()')
 
 -- grep visual selected text directly
-map('v', '<leader>fsw', tb.grep_string, {}, 'telescope.grep_string(--visual-mode)')
+map('v', '<leader>Fsw', tb.grep_string, {}, 'telescope.grep_string(--visual-mode)')
 map('v', '<leader>*', tb.grep_string, {}, 'telescope.grep_string(--visual-mode)')
 
 -- color scheme
-map('n', '<leader>fcs', tb.colorscheme, {}, 'telescope.colorscheme()')
+map('n', '<leader>Fcs', tb.colorscheme, {}, 'telescope.colorscheme()')
 
 -- git navigation
 map('n', '<leader>gC', tb.git_commits, {}, 'telescope.git_commits()')
@@ -53,42 +64,42 @@ map('n', '<leader>gbc', tb.git_bcommits, {}, 'telescope.git_bcommits()')
 map('n', '<leader>gd', tb.git_status, {}, 'telescope.git_status()')
 
 -- vim commands
-map('n', '<leader>f;', tb.command_history, {}, 'telescope.command_history()')
-map('n', '<leader>fch', tb.command_history, {}, 'telescope.command_history()')
-map('n', '<leader>fcc', tb.commands, {}, 'telescope.command_custom()')
+map('n', '<leader>F;', tb.command_history, {}, 'telescope.command_history()')
+map('n', '<leader>Fch', tb.command_history, {}, 'telescope.command_history()')
+map('n', '<leader>Fcc', tb.commands, {}, 'telescope.command_custom()')
 
 -- vim autocmds
-map('n', '<leader>fac', tb.autocommands, {}, 'telescope.autocommand()')
+map('n', '<leader>Fac', tb.autocommands, {}, 'telescope.autocommand()')
 
 -- lsp
-map('n', '<leader>fv', tb.lsp_references, {}, 'telescope.lsp_references()')
-map('n', '<leader>fe', tb.diagnostics, {}, 'telescope.diagnostics()')
-map('n', '<leader>fca', vim.lsp.buf.code_action, {}, 'telescope.code_action()')
+map('n', '<leader>Fv', tb.lsp_references, {}, 'telescope.lsp_references()')
+map('n', '<leader>Fe', tb.diagnostics, {}, 'telescope.diagnostics()')
+map('n', '<leader>Fca', vim.lsp.buf.code_action, {}, 'telescope.code_action()')
 map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 
 -- highlights
-map('n', '<leader>fi', tb.highlights, {}, 'telescope.highlights()')
+map('n', '<leader>Fi', tb.highlights, {}, 'telescope.highlights()')
 
 -- spell
-map('n', '<leader>fss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
+map('n', '<leader>Fss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
 
 -- keymaps
-map('n', '<leader>fk', tb.keymaps, {}, 'telescope.keymaps()')
+map('n', '<leader>Fk', tb.keymaps, {}, 'telescope.keymaps()')
 
 -- fzf current buffer
-map('n', '<leader>fz', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
+map('n', '<leader>Fz', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
 
 -- treesitter objects
-map('n', '<leader>fm', tb.treesitter, {}, 'telescope.treesitter()')
+map('n', '<leader>Fm', tb.treesitter, {}, 'telescope.treesitter()')
 
 -- registers
-map('n', '<leader>f"', tb.registers, {}, 'telescope.registers()')
+map('n', '<leader>F"', tb.registers, {}, 'telescope.registers()')
 
 -- marks
-map('n', '<leader>f\'', tb.marks, {}, 'telescope.marks()')
+map('n', '<leader>F\'', tb.marks, {}, 'telescope.marks()')
 
 -- list all telescop.builtin functions
-map('n', '<leader>fp', tb.builtin, {}, 'telescope.builtin()')
+map('n', '<leader>Fp', tb.builtin, {}, 'telescope.builtin()')
 
 -- list vim options
-map('n', '<leader>fo', tb.vim_options, {}, 'telescope.vim_options()')
+map('n', '<leader>Fo', tb.vim_options, {}, 'telescope.vim_options()')
