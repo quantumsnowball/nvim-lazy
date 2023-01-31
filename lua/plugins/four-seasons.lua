@@ -1,6 +1,7 @@
 return {
     'quantumsnowball/four-seasons.nvim',
     branch = 'dev',
+    url = 'git@github.com:quantumsnowball/four-seasons.nvim.git',
     event = 'VimEnter',
     config = function()
         -- load
