@@ -1,10 +1,8 @@
 -- display color code on background
--- https://github.com/norcalli/nvim-colorizer.lua
+-- https://github.com/NvChad/nvim-colorizer.lua
 return {
-    'norcalli/nvim-colorizer.lua',
+    'NvChad/nvim-colorizer.lua',
     config = function()
-        require('colorizer').setup {
-            '*'
-        }
+        require('colorizer').setup {}
     end
 }
