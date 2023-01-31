@@ -45,3 +45,5 @@ vim.cmd "noremap zh <Cmd>call search('[([{<>}\\])]', 'b')<CR>"
 map('n', ';w', 'evb')
 map('n', ';e', 'viw')
 map('n', ';a', '$v^')
+-- edit/delete inner word
+map('n', ';d', 'diw')
