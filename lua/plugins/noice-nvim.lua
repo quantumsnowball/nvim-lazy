@@ -11,9 +11,7 @@ return {
         "rcarriga/nvim-notify",
     },
     event = "VeryLazy",
-
     opts = {
-        -- TODO when loading back the session, got double lualine for all buffers in other tabpage #debug
         cmdline = {
         },
         routes = {
@@ -54,4 +52,8 @@ return {
         -- open noice history in telescope
         { "<leader>sh", '<cmd>Noice telescope<cr>', desc = 'Notification History' }
     },
+    init = function()
+        -- when loading back the session, got double lualine for all buffers in other tabpage #bug
+        vim.cmd('autocmd TabEnter * set cmdheight=0')
+    end,
 }
