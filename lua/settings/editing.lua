@@ -32,7 +32,7 @@ map('i', '<C-o>', '<esc>o')
 -- toggle spell checking
 map('n', '<leader>sc', ':set spell!<cr>')
 -- use Tab to toggle matching group
--- -- normal mode: matching brackets or tags (by matchit.vim, need to set remap=true)
+-- -- normal mode: matching  or tags (by matchit.vim, need to set remap=true)
 -- -- visual mode: easily select the opposite matching whole section
 -- -- operation pending mode: can delete, yank, or cut the whole section, very handy!
 map({ 'n', 'v', 'o' }, '<Tab>', '%', { remap = true })
@@ -41,3 +41,7 @@ map({ 'n', 'v', 'o' }, ']<Tab>', ']m', { remap = true })
 -- search for pairable symbols
 vim.cmd "noremap zl <Cmd>call search('[([{<>}\\])]')<CR>"
 vim.cmd "noremap zh <Cmd>call search('[([{<>}\\])]', 'b')<CR>"
+-- select inner word/line(without linebreak)
+map('n', ';w', 'evb')
+map('n', ';e', 'viw')
+map('n', ';a', '$v^')
