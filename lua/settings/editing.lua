@@ -38,3 +38,6 @@ map('n', '<leader>sc', ':set spell!<cr>')
 map({ 'n', 'v', 'o' }, '<Tab>', '%', { remap = true })
 map({ 'n', 'v', 'o' }, '[<Tab>', '[m', { remap = true })
 map({ 'n', 'v', 'o' }, ']<Tab>', ']m', { remap = true })
+-- search for pairable symbols
+vim.cmd "noremap zl <Cmd>call search('[([{<>}\\])]')<CR>"
+vim.cmd "noremap zh <Cmd>call search('[([{<>}\\])]', 'b')<CR>"
