@@ -21,7 +21,7 @@ map('n', 'g\\', ':vsplit<cr>')
 -- toggle a new tabpage
 map('n', '<F12>', ':tabnew<cr>')
 -- cancel search highlight after search
-map('n', 'zn', ':noh<cr>', {}, 'Clear search result highlight')
+map('n', 'zh', ':noh<cr>', {}, 'Clear search result highlight')
 -- G also center line
 map('n', 'G', 'Gzz')
 -- <leader>Q records macro, q is free
