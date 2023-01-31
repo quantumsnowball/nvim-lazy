@@ -83,7 +83,7 @@ map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 map('n', '<leader>Fi', tb.highlights, {}, 'telescope.highlights()')
 
 -- fzf current buffer
-map('n', '<leader>Fz', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
+map('n', '<leader>z', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
 
 -- treesitter objects
 map('n', '<leader>Fm', tb.treesitter, {}, 'telescope.treesitter()')
