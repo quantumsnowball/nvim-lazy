@@ -4,7 +4,7 @@ local map = require('utils').map
 ---------------
 -- swap ; :
 -- map('n', ';', ':')
-map('n', ';', '<cmd>call feedkeys(":")<cr>')
+-- map('n', ';', '<cmd>call feedkeys(":")<cr>')
 -- delete
 map('n', 'x', '"_x')
 map('v', 'x', '"_x')

@@ -9,6 +9,7 @@ map('n', '<c-s>', ':noautocmd w<cr>')
 map('i', '<c-s>', '<c-o>:w<cr>')
 map('v', '<c-s>', '<esc>:w<cr>')
 map('n', 'qs', ':w<cr>')
+map('n', ';s', ':w<cr>')
 -- quit windo shortcut
 map('n', 'qw', ':q<cr>')
 map('n', 'qW', ':qa<cr>')
