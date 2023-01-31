@@ -13,6 +13,9 @@ return {
     event = "VeryLazy",
 
     opts = {
+        -- TODO when loading back the session, got double lualine for all buffers in other tabpage #debug
+        cmdline = {
+        },
         lsp = {
             override = {
                 ["vim.lsp.util.convert_input_to_markdown_lines"] = true,

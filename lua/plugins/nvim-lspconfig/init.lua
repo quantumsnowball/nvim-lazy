@@ -38,6 +38,7 @@ return {
             -- 1. use Mason to install the server
             -- 2. add the correct name to this lise
             -- 3. to provide extra configs, create a module with the exact name and return the table
+            -- TODO I can't print any message inside the config(), hard to debug vars. #debug
             local selected = {
                 'pyright',
                 'pylsp',
