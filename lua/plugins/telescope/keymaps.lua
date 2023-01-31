@@ -15,6 +15,11 @@ end, {}, 'telescope.live_grep()')
 map('n', '<leader>R', function()
     tb.oldfiles({ only_cwd = true })
 end, {}, 'telescope.oldfiles()')
+-- find buffers
+map('n', '<leader>b', tb.buffers, {}, 'telescope.buffers()')
+map('n', '<leader>B', function()
+    tb.buffers({ initial_mode = 'insert' })
+end, {}, 'telescope.buffers()')
 -- find helps
 map('n', '<leader>H', tb.help_tags, {}, 'telescope.help_tags()')
 -- find keymaps
@@ -41,12 +46,6 @@ map('n', '<leader>Fnw', tb.live_grep, {}, 'telescope.live_grep(--no-hidden)')
 map('n', '<leader>Faw', function()
     tb.live_grep({ additional_args = function() return { "--hidden", "--no-ignore" } end })
 end, {}, 'telescope.live_grep(--everything)')
-
--- find buffers
-map('n', '<leader>b', tb.buffers, {}, 'telescope.buffers()')
-map('n', '<leader>Fb', function()
-    tb.buffers({ initial_mode = 'insert' })
-end, {}, 'telescope.buffers()')
 
 -- find tabpages
 -- map('n', 'T', tb.tabpages, {}, 'telescope.tabpages()')
