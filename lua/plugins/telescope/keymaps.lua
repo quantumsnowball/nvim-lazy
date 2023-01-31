@@ -15,6 +15,9 @@ end, {}, 'telescope.live_grep()')
 map('n', '<leader>H', tb.help_tags, {}, 'telescope.help_tags()')
 -- find keymaps
 map('n', '<leader>K', function() tb.keymaps({ initial_mode = 'insert' }) end, {}, 'telescope.keymaps()')
+-- find dictionary
+map('n', '<leader>ss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
+
 
 --
 -- less common pickers
@@ -80,9 +83,6 @@ map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 
 -- highlights
 map('n', '<leader>Fi', tb.highlights, {}, 'telescope.highlights()')
-
--- spell
-map('n', '<leader>Fss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
 
 -- fzf current buffer
 map('n', '<leader>Fz', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
