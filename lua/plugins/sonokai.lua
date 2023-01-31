@@ -2,6 +2,7 @@
 -- https://github.com/sainnhe/sonokai
 return {
     'sainnhe/sonokai',
+    enabled = false,
     config = function()
         -- enable the theme and choose the variant
         -- options:
