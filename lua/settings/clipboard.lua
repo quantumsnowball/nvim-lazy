@@ -47,3 +47,4 @@ map('n', 'yaa', 'ggVGy', {}, 'copy all text')
 map('n', 'daa', 'ggVG"_d', {}, 'delete all text')
 map('n', '<leader>daa', 'ggVGd', {}, 'cut all text')
 map('n', 'caa', 'ggVG"_c', {}, 'change all text')
+-- TODO #debug yy is delay, yj/yk somethings will copy the adjacent lines
