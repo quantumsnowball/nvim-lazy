@@ -5,12 +5,16 @@ local map = require('utils').map
 -- most common
 -- should be as handy as possible, and not sharing a prefix with other combos
 --
--- files
+-- find files
 map('n', '<leader>f', function() tb.find_files({ hidden = true }) end, {}, 'telescope.find_files()')
--- grep
+-- find words
 map('n', '<leader>w', function()
     tb.live_grep({ additional_args = function() return { "--hidden" } end })
 end, {}, 'telescope.live_grep()')
+-- find helps
+map('n', '<leader>H', tb.help_tags, {}, 'telescope.help_tags()')
+-- find keymaps
+map('n', '<leader>K', function() tb.keymaps({ initial_mode = 'insert' }) end, {}, 'telescope.keymaps()')
 
 --
 -- less common pickers
@@ -44,9 +48,6 @@ end, {}, 'telescope.buffers()')
 
 -- find tabpages
 -- map('n', 'T', tb.tabpages, {}, 'telescope.tabpages()')
-
--- find helps
-map('n', '<leader>Fh', tb.help_tags, {}, 'telescope.help_tags()')
 
 -- find jumplist
 map('n', '<leader>Fj', tb.jumplist, {}, 'telescope.jumplist()')
@@ -82,9 +83,6 @@ map('n', '<leader>Fi', tb.highlights, {}, 'telescope.highlights()')
 
 -- spell
 map('n', '<leader>Fss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
-
--- keymaps
-map('n', '<leader>Fk', tb.keymaps, {}, 'telescope.keymaps()')
 
 -- fzf current buffer
 map('n', '<leader>Fz', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
