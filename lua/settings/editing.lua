@@ -47,3 +47,4 @@ map('n', ';e', 'viw')
 map('n', ';a', '$v^')
 -- edit/delete inner word
 map('n', ';d', 'diw')
+map('n', ';c', 'ciw')
