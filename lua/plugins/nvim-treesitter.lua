@@ -13,9 +13,5 @@ return {
             textobjects = { enable = true },
             indent = { enable = false }
         }
-        -- enable code folding
-        vim.opt.foldmethod = 'expr'
-        vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-        vim.opt.foldlevel = 10
     end
 }
