@@ -11,8 +11,8 @@ map('n', 'U', '~')
 map('n', '<space>2', ':set shiftwidth=2<cr>')
 map('n', '<space>4', ':set shiftwidth=4<cr>')
 -- begin and end of Word in visual mode
-map('v', 'gk', 'E')
-map('v', 'gj', 'B')
+-- map('v', 'gk', 'E')
+-- map('v', 'gj', 'B')
 -- home and end in normal, visual, operator mode
 map({ 'n', 'v', 'o' }, 'gh', '^', {}, 'Home')
 map({ 'n', 'v', 'o' }, 'gl', '$', {}, 'End')
@@ -47,4 +47,6 @@ map('n', ';e', 'viw')
 map('n', ';a', '$v^')
 -- edit/delete inner word
 map('n', ';d', '"_diw')
+map('n', ';D', '"_diW')
 map('n', ';c', '"_ciw')
+map('n', ';C', '"_ciW')

@@ -8,6 +8,8 @@ return {
         -- Normal-mode
         map('n', '<C-down>', ':MoveLine(1)<CR>', opts)
         map('n', '<C-up>', ':MoveLine(-1)<CR>', opts)
+        map('n', 'gj', ':MoveLine(1)<CR>', opts)
+        map('n', 'gk', ':MoveLine(-1)<CR>', opts)
         -- map('n', '<A-h>', ':MoveHChar(-1)<CR>', opts)
         -- map('n', '<A-l>', ':MoveHChar(1)<CR>', opts)
 
@@ -22,5 +24,8 @@ return {
         map('v', '<C-k>', ':MoveBlock(-1)<CR>', opts)
         map('v', '<C-h>', ':MoveHBlock(-1)<CR>', opts)
         map('v', '<C-l>', ':MoveHBlock(1)<CR>', opts)
+        --   g + hjkl
+        map('x', 'gj', ':MoveBlock(1)<CR>', opts)
+        map('x', 'gk', ':MoveBlock(-1)<CR>', opts)
     end
 }
