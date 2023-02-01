@@ -49,5 +49,5 @@ map('n', '<leader>daa', 'ggVGd', {}, 'cut all text')
 map('n', 'caa', 'ggVG"_c', {}, 'change all text')
 -- copy/duplicate lines above/below
 -- TODO #debug yy is delay, yj/yk somethings will copy the adjacent lines
-map('n', 'zk', 'yyP^')
-map('n', 'zj', 'yyp$')
+map('n', 'zk', '""yy""P^')
+map('n', 'zj', '""yy""p$')
