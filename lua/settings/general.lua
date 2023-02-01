@@ -10,6 +10,7 @@ map('i', '<c-s>', '<c-o>:w<cr>')
 map('v', '<c-s>', '<esc>:w<cr>')
 map('n', 'qs', ':w<cr>')
 map('n', ';s', ':w<cr>')
+map('n', ';S', ':wa<cr>')
 -- quit windo shortcut
 map('n', 'qw', ':q<cr>')
 map('n', 'qW', ':qa<cr>')
