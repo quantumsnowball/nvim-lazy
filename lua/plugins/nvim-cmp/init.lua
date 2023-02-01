@@ -38,6 +38,9 @@ return {
                     return item
                 end,
             },
+            view = {
+                entries = { name = 'custom', selection_order = 'near_cursor' }
+            },
         }
     end
 }
