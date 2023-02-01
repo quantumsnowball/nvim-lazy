@@ -50,3 +50,5 @@ map('n', ';d', '"_diw')
 map('n', ';D', '"_diW')
 map('n', ';c', '"_ciw')
 map('n', ';C', '"_ciW')
+-- delete line
+map('n', ';l', '"_dd')
