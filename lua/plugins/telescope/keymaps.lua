@@ -20,12 +20,20 @@ map('n', '<leader>b', tb.buffers, {}, 'telescope.buffers()')
 map('n', '<leader>B', function()
     tb.buffers({ initial_mode = 'insert' })
 end, {}, 'telescope.buffers()')
+-- fzf current buffer
+map('n', '<leader>z', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
 -- find helps
 map('n', '<leader>H', tb.help_tags, {}, 'telescope.help_tags()')
 -- find keymaps
 map('n', '<leader>K', function() tb.keymaps({ initial_mode = 'insert' }) end, {}, 'telescope.keymaps()')
 -- find dictionary
 map('n', '<leader>ss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
+-- lsp
+map('n', '<leader>v', tb.lsp_references, {}, 'telescope.lsp_references()')
+map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
+-- registers
+map('n', '<leader>"', tb.registers, {}, 'telescope.registers()')
+
 
 
 --
@@ -74,22 +82,14 @@ map('n', '<leader>Fcc', tb.commands, {}, 'telescope.command_custom()')
 map('n', '<leader>Fac', tb.autocommands, {}, 'telescope.autocommand()')
 
 -- lsp
-map('n', '<leader>Fv', tb.lsp_references, {}, 'telescope.lsp_references()')
 map('n', '<leader>Fe', tb.diagnostics, {}, 'telescope.diagnostics()')
 map('n', '<leader>Fca', vim.lsp.buf.code_action, {}, 'telescope.code_action()')
-map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 
 -- highlights
 map('n', '<leader>Fi', tb.highlights, {}, 'telescope.highlights()')
 
--- fzf current buffer
-map('n', '<leader>z', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
-
 -- treesitter objects
 map('n', '<leader>Fm', tb.treesitter, {}, 'telescope.treesitter()')
-
--- registers
-map('n', '<leader>F"', tb.registers, {}, 'telescope.registers()')
 
 -- marks
 map('n', '<leader>F\'', tb.marks, {}, 'telescope.marks()')
