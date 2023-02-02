@@ -55,6 +55,9 @@ M.pickers = {
         fname_width = 60,
         trim_text = true,
         layout_config = { preview_height = 0.73 }
+    },
+    lsp_references = {
+        jump_type = 'never',
     }
 }
 
