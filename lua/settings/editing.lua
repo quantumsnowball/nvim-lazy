@@ -42,7 +42,7 @@ map({ 'n', 'v', 'o' }, ']<Tab>', ']m', { remap = true })
 vim.cmd "noremap zl <Cmd>call search('[([{<>}\\])]')<CR>"
 vim.cmd "noremap zh <Cmd>call search('[([{<>}\\])]', 'b')<CR>"
 -- select inner word/line(without linebreak)
-map('n', ';w', 'evb')
+map('n', ';w', 'hevb')
 map('n', ';e', 'viw')
 map('n', ';a', '$v^')
 -- edit/delete inner word
