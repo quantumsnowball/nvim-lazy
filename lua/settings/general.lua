@@ -36,3 +36,6 @@ map('n', 'qfo', ':copen<cr>')
 map('n', 'qfc', ':cclose<cr>')
 map('n', 'qfj', ':cnext<cr>')
 map('n', 'qfk', ':cprev<cr>')
+-- close tabpages to the right
+map('n', 'q>', '<cmd>.+1,$tabdo :tabclose<cr>')
+map('n', 't>', '<cmd>.+1,$tabdo :tabclose<cr>')
