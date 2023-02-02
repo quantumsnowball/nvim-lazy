@@ -40,9 +40,9 @@ return {
             -- 3. to provide extra configs, create a module with the exact name and return the table
             -- TODO I can't print any message inside the config(), hard to debug vars. #debug
             local selected = {
-                'pyright',
-                'pylsp',
                 'sumneko_lua',
+                'pyright',
+                -- 'pylsp',
             }
             for _, name in pairs(selected) do
                 require('plugins.nvim-lspconfig.lsp')(name, caps)
