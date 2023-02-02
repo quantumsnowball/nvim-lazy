@@ -51,7 +51,6 @@ return {
         local map = require('utils').map
         map('n', 'qn', ':cnext<cr>', {}, 'quickfix_list.next()')
         map('n', 'qp', ':cprevious<cr>', {}, 'quickfix_list.previous()')
-        map('n', 'qo', ':copen<cr>', {}, 'quickfix_list.open()')
         map('n', 'qc', ':cclose<cr>', {}, 'quickfix_list.close()')
     end
 }
