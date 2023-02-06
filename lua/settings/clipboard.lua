@@ -52,4 +52,7 @@ map('n', 'zk', '""yy""P^') -- line above
 map('v', 'zk', '""y`<""P`[V`]') -- block above
 map('n', 'zj', '""yy""p$') -- line below
 map('v', 'zj', '""y`>""p`[V`]') -- block above
--- TODO #debug yy is delay, yj/yk somethings will copy the adjacent lines
+-- #debug yy is delay, yj/yk somethings will copy the adjacent lines
+-- temp fix map all mistake key to copy line
+map('n', 'yj', 'yy')
+map('n', 'yk', 'yy')
