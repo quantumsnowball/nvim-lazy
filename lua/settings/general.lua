@@ -24,8 +24,9 @@ map('n', 'g\\', ':vsplit<cr>')
 map('n', '<F12>', ':tabnew<cr>')
 -- cancel search highlight after search
 map('n', 'zi', ':noh<cr>', {}, 'Clear search result highlight')
--- G also center line
+-- G and gg also center line
 map('n', 'G', 'Gzz')
+map('n', 'gg', 'ggzz')
 -- <leader>Q records macro, q is free
 map({ 'n', 'v' }, '<leader>q', 'q')
 map({ 'n', 'v' }, 'q', '<Nop>')
