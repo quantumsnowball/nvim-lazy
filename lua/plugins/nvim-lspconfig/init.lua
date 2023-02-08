@@ -42,7 +42,10 @@ return {
             local selected = {
                 'sumneko_lua',
                 'pyright',
-                -- 'pylsp',
+                'tsserver',
+                "cssls",
+                "jsonls",
+                "html",
             }
             for _, name in pairs(selected) do
                 require('plugins.nvim-lspconfig.lsp')(name, caps)
