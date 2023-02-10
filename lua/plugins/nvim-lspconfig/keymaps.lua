@@ -3,7 +3,7 @@ return {
     -- editing
     { '<leader>r', vim.lsp.buf.rename, desc = 'lsp.buf.rename()' },
     { ';f', vim.lsp.buf.format, desc = 'lsp.buf.format()' },
-    { '<leader>qf', vim.lsp.buf.code_action, desc = 'lsp.buf.code_action()' },
+    { 'qf', vim.lsp.buf.code_action, desc = 'lsp.buf.code_action()' },
     -- code inspect
     { 'gr', vim.lsp.buf.references, desc = 'lsp.buf.references()' },
     { 'gD', vim.lsp.buf.declaration, desc = 'lsp.buf.declaration()' },
