@@ -16,5 +16,8 @@ return {
         require('utils').map('n', '<leader>t', function()
             tabman({ layout_config = layout_config })
         end, {}, 'telescope.tabpages()')
+        require('utils').map('n', '<space>t', function()
+            tabman({ layout_config = layout_config })
+        end, {}, 'telescope.tabpages()')
     end
 }
