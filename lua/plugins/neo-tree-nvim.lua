@@ -15,6 +15,7 @@ return {
             -- float
             { '<leader>e', '<cmd>Neotree reveal float toggle<cr>', desc = 'Neotree Floating' },
             { '<space>e', '<cmd>Neotree reveal float toggle<cr>', desc = 'Neotree Floating' },
+            { 'qe', '<cmd>Neotree reveal float toggle<cr>', desc = 'Neotree Floating' },
             -- left
             { '<leader>EH', '<cmd>Neotree reveal left toggle<cr>', desc = 'Neotree Left' },
             { '<space>EH', '<cmd>Neotree reveal left toggle<cr>', desc = 'Neotree Left' },
