@@ -7,32 +7,39 @@ local map = require('utils').map
 --
 -- find files
 map('n', '<leader>f', function() tb.find_files({ hidden = true }) end, {}, 'telescope.find_files()')
+map('n', '<space>f', function() tb.find_files({ hidden = true }) end, {}, 'telescope.find_files()')
 -- find words
-map('n', '<leader>w', function()
-    tb.live_grep({ additional_args = function() return { "--hidden" } end })
-end, {}, 'telescope.live_grep()')
+map('n', '<leader>w', function() tb.live_grep({ additional_args = function() return { "--hidden" } end }) end, {},
+    'telescope.live_grep()')
+map('n', '<space>w', function() tb.live_grep({ additional_args = function() return { "--hidden" } end }) end, {},
+    'telescope.live_grep()')
 -- find recent files
-map('n', '<leader>R', function()
-    tb.oldfiles({ only_cwd = true })
-end, {}, 'telescope.oldfiles()')
+map('n', '<leader>R', function() tb.oldfiles({ only_cwd = true }) end, {}, 'telescope.oldfiles()')
+map('n', '<space>R', function() tb.oldfiles({ only_cwd = true }) end, {}, 'telescope.oldfiles()')
 -- find buffers
 map('n', '<leader>b', tb.buffers, {}, 'telescope.buffers()')
-map('n', '<leader>B', function()
-    tb.buffers({ initial_mode = 'insert' })
-end, {}, 'telescope.buffers()')
+map('n', '<space>b', tb.buffers, {}, 'telescope.buffers()')
+map('n', '<leader>B', function() tb.buffers({ initial_mode = 'insert' }) end, {}, 'telescope.buffers()')
+map('n', '<space>B', function() tb.buffers({ initial_mode = 'insert' }) end, {}, 'telescope.buffers()')
 -- fzf current buffer
 map('n', '<leader>z', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
+map('n', '<space>z', tb.current_buffer_fuzzy_find, {}, 'telescope.current_buffer_fuzzy_find()')
 -- find helps
 map('n', '<leader>H', tb.help_tags, {}, 'telescope.help_tags()')
+map('n', '<space>H', tb.help_tags, {}, 'telescope.help_tags()')
 -- find keymaps
 map('n', '<leader>K', function() tb.keymaps({ initial_mode = 'insert' }) end, {}, 'telescope.keymaps()')
+map('n', '<space>K', function() tb.keymaps({ initial_mode = 'insert' }) end, {}, 'telescope.keymaps()')
 -- find dictionary
 map('n', '<leader>ss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
+map('n', '<space>ss', tb.spell_suggest, {}, 'telescope.spell_suggest()')
 -- lsp
 map('n', '<leader>v', tb.lsp_references, {}, 'telescope.lsp_references()')
+map('n', '<space>v', tb.lsp_references, {}, 'telescope.lsp_references()')
 map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 -- registers
 map('n', '<leader>"', tb.registers, {}, 'telescope.registers()')
+map('n', '<space>"', tb.registers, {}, 'telescope.registers()')
 
 
 

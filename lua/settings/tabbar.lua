@@ -16,7 +16,7 @@ map('n', 'qj', ':bprev<CR>')
 map('n', 'qk', ':bnext<CR>')
 -- map('n', 'qh', ':bfirst<CR>')
 -- map('n', 'ql', ':blast<CR>')
-map('n', '<space>b', ':e #<CR>')
+-- map('n', '<space>b', ':e #<CR>')
 map('n', 'q;', ':e #<CR>')
 
 -- navigate between tabpages
