@@ -62,7 +62,10 @@ return {
                     ["<bs>"] = 'close_node',
                     ['E'] = 'expand_all_nodes',
                     ['g-'] = 'split_with_window_picker',
+                    ['<c-x>'] = 'split_with_window_picker',
                     ['g\\'] = 'vsplit_with_window_picker',
+                    ['<c-v>'] = 'vsplit_with_window_picker',
+                    ['<c-t>'] = 'open_tabnew',
                     ["<tab>"] = "next_source",
                     -- disable
                     ['s'] = '',
