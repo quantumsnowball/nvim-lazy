@@ -4,7 +4,7 @@ return {
     'declancm/cinnamon.nvim',
     config = function()
         require('cinnamon').setup {
-            default_delay = 2
+            default_delay = 0, -- The default delay (in ms) between each line when scrolling.
         }
     end
 }
