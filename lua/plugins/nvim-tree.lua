@@ -3,6 +3,7 @@
 return {
     'kyazdani42/nvim-tree.lua',
     tag = 'nightly',
+    enabled = false,
     dependencies = 'kyazdani42/nvim-web-devicons',
     keys = {
         { '<leader>E', '<cmd>NvimTreeToggle .<cr>', desc = 'NvimTreeToggle' },
