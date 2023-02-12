@@ -1,3 +1,5 @@
+-- neo-tree
+-- https://github.com/nvim-neo-tree/neo-tree.nvim
 return {
     {
         'nvim-neo-tree/neo-tree.nvim',
@@ -53,15 +55,18 @@ return {
                     ['<esc>'] = 'close_window',
                     ['o'] = 'toggle_node',
                     ['e'] = 'toggle_node',
+                    ['<right>'] = 'open',
+                    ['<left>'] = 'close_node',
+                    ["<bs>"] = 'close_node',
                     ['E'] = 'expand_all_nodes',
                     ['g-'] = 'split_with_window_picker',
                     ['g\\'] = 'vsplit_with_window_picker',
-                    ["<left>"] = "prev_source",
-                    ["<right>"] = "next_source",
                     ["<tab>"] = "next_source",
+                    -- disable
                     ['s'] = '',
                     ['S'] = '',
                     ['l'] = '',
+                    ['.'] = '',
                 }
             },
             git_status = {
