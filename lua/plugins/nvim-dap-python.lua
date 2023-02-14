@@ -5,7 +5,8 @@ return {
     dependencies = 'mfussenegger/nvim-dap',
     event = 'VeryLazy',
     keys = {
-        { '<space>dt', function() require('dap-python').test_method() end, desc = 'nvim-dap-python.test_method()' }
+        { '<space>dt', function() require('dap-python').test_method() end, desc = 'nvim-dap-python.test_method()' },
+        { '<F9>',      function() require('dap-python').test_method() end, desc = 'nvim-dap-python.test_method()' },
     },
     config = function()
         require('dap-python').setup('python')
