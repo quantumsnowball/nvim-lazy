@@ -2,6 +2,7 @@
 -- https://github.com/rcarriga/nvim-notify
 return {
     "rcarriga/nvim-notify",
+    enabled = false,
     keys = {
         { "zn", function()
             require("notify").dismiss({ silent = true, pending = true })
