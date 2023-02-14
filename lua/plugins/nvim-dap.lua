@@ -1,23 +1,25 @@
--- debug adapter for neovim
--- https://github.com/mfussenegger/nvim-dap
 return {
     {
+        -- debug adapter for neovim
+        -- https://github.com/mfussenegger/nvim-dap
         'mfussenegger/nvim-dap',
         event = 'VeryLazy',
         keys = {
-            { ';b',        function() require('dap').toggle_breakpoint() end },
-            { '<F9>',      function() require('dap').continue() end },
-            { '<space>ds', function() require('dap').continue() end },
-            { '<F10>',     function() require('dap').terminate() end },
-            { '<space>de', function() require('dap').terminate() end },
+            { ';b',        function() require('dap').toggle_breakpoint() end, desc = 'nvim-dap.breakpoint()' },
+            { '<F9>',      function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
+            { '<space>dc', function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
+            { '<F10>',     function() require('dap').terminate() end,         desc = 'nvim-dap.terminate()' },
+            { '<space>de', function() require('dap').terminate() end,         desc = 'nvim-dap.terminate()' },
         }
     },
     {
+        -- debug ui for nvim-dap
+        -- https://github.com/rcarriga/nvim-dap-ui
         'rcarriga/nvim-dap-ui',
         dependencies = 'mfussenegger/nvim-dap',
         event = 'VeryLazy',
         keys = {
-            { '<F7>', function() require('dapui').toggle() end },
+            { '<F7>', function() require('dapui').toggle() end, desc = 'nvim-dap-ui.toggle()' },
         },
         config = function()
             local dapui = require("dapui")
@@ -29,12 +31,11 @@ return {
         end
     },
     {
+        -- python settings for nvim-dap
+        -- https://github.com/mfussenegger/nvim-dap-python
         'mfussenegger/nvim-dap-python',
         dependencies = 'mfussenegger/nvim-dap',
         event = 'VeryLazy',
-        keys = {
-            { '<F7>', function() require('dapui').toggle() end },
-        },
         config = function()
             require('dap-python').setup('python')
             require('dap-python').test_runner = 'pytest'
