@@ -52,3 +52,16 @@ map('n', ';c', '"_ciw')
 map('n', ';C', '"_ciW')
 -- delete line
 map('n', ';l', '"_dd')
+-- quick pairs
+--   inside
+map('n', '<leader>[', 'a[]<esc>h')
+map('n', '<leader>{', 'a{}<esc>h')
+map('n', '<leader>(', 'a()<esc>h')
+map('n', '<leader><', 'a<><esc>h')
+--   outside
+map('n', '<leader>]', 'a[]<esc>')
+map('n', '<leader>}', 'a{}<esc>')
+map('n', '<leader>)', 'a()<esc>')
+map('n', '<leader>>', 'a<><esc>')
+map('n', "<leader>'", "a''<esc>")
+map('n', '<leader>"', 'a""<esc>')

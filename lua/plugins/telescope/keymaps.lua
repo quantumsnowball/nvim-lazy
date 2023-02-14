@@ -38,7 +38,7 @@ map('n', '<leader>v', tb.lsp_references, {}, 'telescope.lsp_references()')
 map('n', '<space>v', tb.lsp_references, {}, 'telescope.lsp_references()')
 map('n', 'gd', tb.lsp_definitions, {}, 'telescope.lsp_definitions()')
 -- registers
-map('n', '<leader>"', tb.registers, {}, 'telescope.registers()')
+-- map('n', '<leader>"', tb.registers, {}, 'telescope.registers()')
 map('n', '<space>"', tb.registers, {}, 'telescope.registers()')
 
 
