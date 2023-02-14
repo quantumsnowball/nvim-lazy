@@ -61,10 +61,10 @@ return {
         dap.listeners.before.event_terminated["dapui_config"] = function() dapui.close() end
         dap.listeners.before.event_exited["dapui_config"] = function() dapui.close() end
         -- icons
-        vim.fn.sign_define('DapBreakpoint', { text = '🛑', texthl = '', linehl = '', numhl = '' })
-        vim.fn.sign_define('DapBreakpointCondition', { text = '🟡', texthl = '', linehl = '', numhl = '' })
-        vim.fn.sign_define('DapLogPoint', { text = '🏁', texthl = '', linehl = '', numhl = '' })
-        vim.fn.sign_define('DapStopped', { text = '👉', texthl = '', linehl = '', numhl = '' })
-        vim.fn.sign_define('DapBreakpointRejected', { text = '✋', texthl = '', linehl = '', numhl = '' })
+        vim.fn.sign_define('DapBreakpoint', { text = '🛑' })
+        vim.fn.sign_define('DapBreakpointCondition', { text = '🟡' })
+        vim.fn.sign_define('DapLogPoint', { text = '🏁' })
+        vim.fn.sign_define('DapStopped', { text = '👉' })
+        vim.fn.sign_define('DapBreakpointRejected', { text = '✋' })
     end
 }
