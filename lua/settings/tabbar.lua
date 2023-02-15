@@ -39,7 +39,6 @@ end
 map('n', 'qt', close_onto_previous_tab, { desc = 'close_onto_previous_tab()' })
 map('n', 'tq', close_onto_previous_tab, { desc = 'close_onto_previous_tab()' })
 map('n', 'tc', ':tabclose<cr>')
-map('n', '<leader>T', ':tabs<cr>')
 map('n', 't;', 'g<Tab>')
 map('n', 'tH', ':tabfirst<cr>')
 map('n', 'tL', ':tablast<cr>')

@@ -96,7 +96,7 @@ return {
     },
     {
         's1n7ax/nvim-window-picker',
-        tag = 'v1.*',
+        -- tag = 'v1.*',
         lazy = true,
         config = function()
             require 'window-picker'.setup({
