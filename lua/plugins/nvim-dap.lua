@@ -4,10 +4,11 @@ return {
     'mfussenegger/nvim-dap',
     event = 'VeryLazy',
     keys = {
-        { ';b',        function() require('dap').toggle_breakpoint() end, desc = 'nvim-dap.breakpoint()' },
+        { ';b',        function() require('dap').toggle_breakpoint() end, desc = 'nvim-dap.toggle_breakpoint()' },
         { ';B', function()
             require('dap').set_breakpoint(vim.fn.input('Condition: '))
-        end, desc = 'nvim-dap.breakpoint(Condition)' },
+        end, desc = 'nvim-dap.set_breakpoint(Condition)' },
+        { '<space>dc', function() require('dap').clear_breakpoints() end, desc = 'nvim-dap.clear_breakpoints()' },
         { '<F8>',      function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
         { '<space>c',  function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
         { '<space>i',  function() require('dap').step_into() end,         desc = 'nvim-dap.up() [older]' },
