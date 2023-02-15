@@ -17,6 +17,10 @@ return {
         { '<space>de', function() require('dap').terminate() end,         desc = 'nvim-dap.terminate()' },
     },
     config = function()
-        require('dap').set_exception_breakpoints({ "raised", "uncaught" })
+        local dap = require("dap")
+        dap.listeners.after.event_initialized['dap_config'] = function()
+            require('dap').set_exception_breakpoints({ "raised", "uncaught" })
+            print('set_exception_breakpoints({ "raised", "uncaught" })')
+        end
     end
 }
