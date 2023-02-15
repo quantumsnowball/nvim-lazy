@@ -77,7 +77,7 @@ map('n', '<leader>Fcs', tb.colorscheme, {}, 'telescope.colorscheme()')
 
 -- git navigation
 map('n', '<leader>gC', tb.git_commits, {}, 'telescope.git_commits()')
-map('n', '<leader>gbc', tb.git_bcommits, {}, 'telescope.git_bcommits()')
+map('n', '<leader>gb', tb.git_bcommits, {}, 'telescope.git_bcommits() [% git blames]')
 map('n', '<leader>gd', tb.git_status, {}, 'telescope.git_status()')
 
 -- vim commands
