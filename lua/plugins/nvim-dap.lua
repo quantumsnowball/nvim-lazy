@@ -5,6 +5,9 @@ return {
     event = 'VeryLazy',
     keys = {
         { ';b',        function() require('dap').toggle_breakpoint() end, desc = 'nvim-dap.breakpoint()' },
+        { ';B', function()
+            require('dap').set_breakpoint(vim.fn.input('Condition: '))
+        end, desc = 'nvim-dap.breakpoint(Condition)' },
         { '<F8>',      function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
         { '<space>c',  function() require('dap').continue() end,          desc = 'nvim-dap.continue()' },
         { '<space>i',  function() require('dap').step_into() end,         desc = 'nvim-dap.up() [older]' },
