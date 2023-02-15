@@ -4,19 +4,8 @@
 local map = require('utils').map
 
 -- navigate between buffers
--- map('n', '<space>j', ':BufferLineCyclePrev<CR>')
--- map('n', '<space>k', ':BufferLineCycleNext<CR>')
--- map('n', '<space>h', ':BufferLineMovePrev<CR>')
--- map('n', '<space>l', ':BufferLineMoveNext<CR>')
--- map('n', 'qj', ':BufferLineCyclePrev<CR>')
--- map('n', 'qk', ':BufferLineCycleNext<CR>')
--- map('n', 'qh', ':BufferLineMovePrev<CR>')
--- map('n', 'ql', ':BufferLineMoveNext<CR>')
 map('n', 'qj', ':bprev<CR>')
 map('n', 'qk', ':bnext<CR>')
--- map('n', 'qh', ':bfirst<CR>')
--- map('n', 'ql', ':blast<CR>')
--- map('n', '<space>b', ':e #<CR>')
 map('n', 'q;', ':e #<CR>')
 
 -- navigate between tabpages
@@ -34,7 +23,9 @@ map('n', 'tN', function()
     vim.cmd('Alpha')
     require('close_buffers').delete({ type = 'nameless' })
 end, {}, 'tabnew_alpha_before')
-map('n', 'to', ':tab split<cr>', {}, 'tabnew_current')
+map('n', 'to', ':tab split<cr>', {}, 'duplicate window to new tabpage')
+map('n', 'tm', '<C-W>T', { desc = 'move window to new tabpage' })
+map('n', '<F12>', '<C-W>T', { desc = 'move window to new tabpage' })
 
 -- closing tabs
 local close_onto_previous_tab = function()

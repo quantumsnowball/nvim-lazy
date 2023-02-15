@@ -21,8 +21,6 @@ map('n', '<F1>', ':WhichKey<cr>', { silent = true })
 -- toggle split windows
 map('n', 'g-', ':split<cr>')
 map('n', 'g\\', ':vsplit<cr>')
--- toggle a new tabpage
-map('n', '<F12>', ':tabnew<cr>')
 -- cancel search highlight after search
 map('n', 'zi', ':noh<cr>', {}, 'Clear search result highlight')
 -- G and gg also center line
