@@ -22,7 +22,7 @@ map('n', '<F1>', ':WhichKey<cr>', { silent = true })
 map('n', 'g-', ':split<cr>')
 map('n', 'g\\', ':vsplit<cr>')
 -- cancel search highlight after search
-map('n', 'zi', ':noh<cr>', {}, 'Clear search result highlight')
+map('n', 'zi', ':noh<cr>', { desc = 'Clear search result highlight' })
 -- G and gg also center line
 map('n', 'G', 'Gzz')
 map('n', 'gg', 'ggzz')

@@ -42,11 +42,11 @@ map('n', 'P', 'gP')
 map('n', 'gP', 'P')
 map('n', 'p', 'p`]')
 -- *aa as change all text operation
-map('n', 'vaa', 'ggVG', {}, 'select all text')
-map('n', 'yaa', 'ggVGy', {}, 'copy all text')
-map('n', 'daa', 'ggVG"_d', {}, 'delete all text')
-map('n', '<leader>daa', 'ggVGd', {}, 'cut all text')
-map('n', 'caa', 'ggVG"_c', {}, 'change all text')
+map('n', 'vaa', 'ggVG', { desc = 'select all text' })
+map('n', 'yaa', 'ggVGy', { desc = 'copy all text' })
+map('n', 'daa', 'ggVG"_d', { desc = 'delete all text' })
+map('n', '<leader>daa', 'ggVGd', { desc = 'cut all text' })
+map('n', 'caa', 'ggVG"_c', { desc = 'change all text' })
 -- copy/duplicate lines/block above/below
 map('n', 'zk', '""yy""P^') -- line above
 map('v', 'zk', '""y`<""P`[V`]') -- block above

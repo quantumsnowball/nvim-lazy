@@ -24,8 +24,8 @@ return {
             delete({ type = 'hidden' })
         end
         -- keymaps
-        map('n', 'qa', close_all_buffers, nil, 'close_all_buffers()')
-        map('n', 'qh', close_hidden_buffers, nil, 'close_all_hidden_buffers()')
-        map('n', 'qo', close_other_tabpages, nil, 'close_other_tabpages()')
+        map('n', 'qa', close_all_buffers, { desc = 'close_all_buffers()' })
+        map('n', 'qh', close_hidden_buffers, { desc = 'close_all_hidden_buffers()' })
+        map('n', 'qo', close_other_tabpages, { desc = 'close_other_tabpages()' })
     end
 }

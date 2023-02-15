@@ -14,8 +14,8 @@ map('n', '<space>4', ':set shiftwidth=4<cr>')
 -- map('v', 'gk', 'E')
 -- map('v', 'gj', 'B')
 -- home and end in normal, visual, operator mode
-map({ 'n', 'v', 'o' }, 'gh', '^', {}, 'Home')
-map({ 'n', 'v', 'o' }, 'gl', '$', {}, 'End')
+map({ 'n', 'v', 'o' }, 'gh', '^', { desc = 'Home' })
+map({ 'n', 'v', 'o' }, 'gl', '$', { desc = 'End' })
 -- home and end in insert mode
 map('i', '<C-h>', '<home>')
 map('i', '<C-l>', '<end>')

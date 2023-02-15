@@ -15,12 +15,12 @@ return {
         -- keymaps
         require('utils').map('n', '<leader>t', function()
             tabman({ layout_config = layout_config })
-        end, {}, 'telescope.tabpages()')
+        end, { desc = 'telescope.tabpages()' })
         require('utils').map('n', 'tt', function()
             tabman({ layout_config = layout_config })
-        end, {}, 'telescope.tabpages()')
+        end, { desc = 'telescope.tabpages()' })
         require('utils').map('n', '<space>t', function()
             tabman({ layout_config = layout_config })
-        end, {}, 'telescope.tabpages()')
+        end, { desc = 'telescope.tabpages()' })
     end
 }

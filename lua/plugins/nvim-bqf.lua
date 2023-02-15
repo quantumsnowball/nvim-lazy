@@ -42,15 +42,15 @@ return {
             },
             filter = {
                 fzf = {
-                    action_for = { ['ctrl-s'] = 'split', ['ctrl-t'] = 'tab drop' },
+                    action_for = { ['ctrl-s'] = 'split',['ctrl-t'] = 'tab drop' },
                     extra_opts = { '--bind', 'ctrl-o:toggle-all', '--prompt', '> ' }
                 }
             }
         })
         -- quick fix list related keymaps
         local map = require('utils').map
-        map('n', 'qn', ':cnext<cr>', {}, 'quickfix_list.next()')
-        map('n', 'qp', ':cprevious<cr>', {}, 'quickfix_list.previous()')
-        map('n', 'qc', ':cclose<cr>', {}, 'quickfix_list.close()')
+        map('n', 'qn', ':cnext<cr>', { desc = 'quickfix_list.next()' })
+        map('n', 'qp', ':cprevious<cr>', { desc = 'quickfix_list.previous()' })
+        map('n', 'qc', ':cclose<cr>', { desc = 'quickfix_list.close()' })
     end
 }
