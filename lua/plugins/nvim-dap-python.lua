@@ -10,6 +10,6 @@ return {
     },
     config = function()
         require('dap-python').setup('python')
-        require('dap-python').test_runner = 'pytest'
+        -- require('dap-python').test_runner = 'pytest'
     end
 }
