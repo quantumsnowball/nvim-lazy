@@ -53,15 +53,16 @@ map('n', ';C', '"_ciW')
 -- delete line
 map('n', ';l', '"_dd')
 -- quick pairs
---   inside
-map('n', '<leader>[', 'a[]<esc>h')
-map('n', '<leader>{', 'a{}<esc>h')
-map('n', '<leader>(', 'a()<esc>h')
-map('n', '<leader><', 'a<><esc>h')
---   outside
-map('n', '<leader>]', 'a[]<esc>')
-map('n', '<leader>}', 'a{}<esc>')
-map('n', '<leader>)', 'a()<esc>')
-map('n', '<leader>>', 'a<><esc>')
-map('n', "<leader>'", "a''<esc>")
-map('n', '<leader>"', 'a""<esc>')
+--   new line
+map('n', '<leader>[', 'A<space>[<cr>]<esc>O')
+map('n', '<leader>{', 'A<space>{<cr>}<esc>O')
+map('n', '<leader>(', 'A<space>(<cr>)<esc>O')
+--   same line
+map('n', '<leader>]', 'a[]<left>')
+map('n', '<leader>}', 'a{}<left>')
+map('n', '<leader>)', 'a()<left>')
+map('n', "<leader>'", "a''<left>")
+map('n', '<leader>"', 'a""<left>')
+-- </> tags
+map('n', '<leader><', 'A<><left>')
+map('n', '<leader>>', 'A</><left>')
