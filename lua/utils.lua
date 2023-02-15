@@ -1,14 +1,14 @@
 local M = {}
 
--- create keymap with custom which-key hints
-function M.map(mode, keys, command, options, hint)
+-- create keymap with presets
+function M.map(mode, keys, command, options)
+    -- defaults
+    local defaults = {
+        silent = true,
+    }
     -- set keymaps
-    options = vim.tbl_extend('force', { silent = true, desc = hint }, options or {})
+    options = vim.tbl_extend('force', defaults, options or {})
     vim.keymap.set(mode, keys, command, options)
-    -- set hint
-    -- if hint then
-    --     require('which-key').register({ [keys] = hint })
-    -- end
 end
 
 -- a debug helper
