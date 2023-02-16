@@ -14,11 +14,11 @@ return {
         end, desc = "Replace in files (Spectre)" },
         { "<leader>sr", function()
             require("spectre").setup { open_cmd = 'new' }
-            require("spectre").open_visual({ select_word = true })
+            require("spectre").open_visual()
         end, desc = "Replace visual selected words (Spectre)", mode = 'v' },
         { "<leader>SR", function()
             require("spectre").setup { open_cmd = 'vnew' }
-            require("spectre").open_visual({ select_word = true })
+            require("spectre").open_visual()
         end, desc = "Replace visual selected words (Spectre)", mode = 'v' },
     },
     opts = {
