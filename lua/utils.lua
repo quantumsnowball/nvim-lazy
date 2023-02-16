@@ -45,6 +45,7 @@ end
 
 -- get nearest pytest function name
 function M.get_nearest_pytest_function_name()
+    local PREFIX = 'test_'
     local ts_utils = require('nvim-treesitter.ts_utils')
     local current_node = ts_utils.get_node_at_cursor()
     -- local get_node_text = vim.treesitter.query.get_node_text
@@ -58,7 +59,7 @@ function M.get_nearest_pytest_function_name()
     while expr do
         if expr:type() == 'function_definition' then
             local fnname = (ts_utils.get_node_text(expr:child(1)))[1]
-            if string.sub(fnname, 1, 4) == 'test' then
+            if string.sub(fnname, 1, 5) == PREFIX then
                 break
             end
         end
