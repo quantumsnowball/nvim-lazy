@@ -17,12 +17,13 @@ describing where in the syntax tree the cursor is.
 
 --]]
 --
+local PREFIX = 'test_'
+
 local run_nearest_pytest_function = function(arg)
     local cwd = vim.fn.expand('%')
-    local pytest_fnname = require('utils').get_nearest_pytest_function_name()
+    local pytest_fnname = require('utils').get_nearest_pytest_function_name(PREFIX)
     -- don't run if not in a test file
-    if #pytest_fnname == 0 then
-        print('Invalid pytest test fnname')
+    if not pytest_fnname then
         return
     end
     -- exec using terminal
