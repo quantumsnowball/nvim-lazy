@@ -12,15 +12,8 @@ map('n', 'qs', ':w<cr>')
 map('n', ';s', ':w<cr>')
 map('n', ';S', ':wa<cr>')
 map('n', '<leader><leader>', ':wa<cr>')
--- quit windo shortcut
-map('n', 'qw', ':q<cr>')
-map('n', 'qW', ':qa<cr>')
-map('n', 'qv', ':qa<cr>')
 -- show which-key root
 map('n', '<F1>', ':WhichKey<cr>', { silent = true })
--- toggle split windows
-map('n', 'g-', ':split<cr>')
-map('n', 'g\\', ':vsplit<cr>')
 -- cancel search highlight after search
 map('n', 'zi', ':noh<cr>', { desc = 'Clear search result highlight' })
 -- G and gg also center line
