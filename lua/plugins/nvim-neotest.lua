@@ -16,6 +16,7 @@
 return {
     {
         "quantumsnowball/neotest",
+        enabled = false,
         branch = 'removed-lib.subprocess.init',
         event = 'VeryLazy',
         dependencies = {
@@ -33,6 +34,7 @@ return {
     {
         -- adapters
         'nvim-neotest/neotest-python',
+        enabled = false,
         event = 'VeryLazy',
         dependencies = {
             "quantumsnowball/neotest",
