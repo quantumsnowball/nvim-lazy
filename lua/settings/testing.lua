@@ -36,24 +36,39 @@ local run_nearest_pytest_function = function(arg)
     vim.fn.feedkeys('G')
 end
 
+local run_current_pytest_file = function(arg)
+    local cwd = vim.fn.expand('%')
+    local command = 'pytest ' .. cwd
+    if arg then command = command .. ' ' .. arg end
+    vim.cmd('botright split')
+    vim.cmd('horizontal resize 7')
+    vim.cmd('terminal ' .. command)
+    vim.fn.feedkeys('G')
+end
+
+-- current function
 map('n', ';t',
     function() run_nearest_pytest_function('--workers auto') end,
-    { desc = 'run nearest pytest (parallel)' })
+    { desc = 'run nearest pytest function (parallel)' })
 map('n', ';Td',
     function() run_nearest_pytest_function('--log-cli-level DEBUG --pdb') end,
-    { desc = 'run nearest pytest (DEBUG, pdb)' })
+    { desc = 'run nearest pytest function (DEBUG, pdb)' })
 map('n', ';Ti',
     function() run_nearest_pytest_function('--log-cli-level INFO --pdb') end,
-    { desc = 'run nearest pytest (INFO, pdb)' })
+    { desc = 'run nearest pytest function (INFO, pdb)' })
 map('n', ';Tw',
     function() run_nearest_pytest_function('--log-cli-level WARNING --pdb') end,
-    { desc = 'run nearest pytest (WARNING, pdb)' })
+    { desc = 'run nearest pytest function (WARNING, pdb)' })
 map('n', ';TD',
     function() run_nearest_pytest_function('--log-cli-level DEBUG --pdb --log-file log/dev-debug.log') end,
-    { desc = 'run nearest pytest (DEBUG, pdb, savelog)' })
+    { desc = 'run nearest pytest function (DEBUG, pdb, savelog)' })
 map('n', ';TI',
     function() run_nearest_pytest_function('--log-cli-level INFO --pdb --log-file log/dev-info.log') end,
-    { desc = 'run nearest pytest (INFO, pdb, savelog)' })
+    { desc = 'run nearest pytest function (INFO, pdb, savelog)' })
 map('n', ';TW',
     function() run_nearest_pytest_function('--log-cli-level WARNING --pdb --log-file log/dev-warning.log') end,
-    { desc = 'run nearest pytest (WARNING, pdb, savelog)' })
+    { desc = 'run nearest pytest function (WARNING, pdb, savelog)' })
+-- current file
+map('n', ';Tf',
+    function() run_current_pytest_file('--workers auto') end,
+    { desc = 'run current pytest file (parallel)' })
