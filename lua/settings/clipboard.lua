@@ -2,9 +2,6 @@ local map = require('utils').map
 ---------------
 -- clipboard --
 ---------------
--- swap ; :
--- map('n', ';', ':')
--- map('n', ';', '<cmd>call feedkeys(":")<cr>')
 -- delete
 map('n', 'x', '"_x')
 map('v', 'x', '"_x')
@@ -56,3 +53,6 @@ map('v', 'zj', '""y`>""p`[V`]') -- block above
 -- temp fix map all mistake key to copy line
 map('n', 'yj', 'yy')
 map('n', 'yk', 'yy')
+-- `'` as register operator, `gm` as go to mark
+map('n', "'", '"')
+map('n', 'zm', "'")

@@ -43,7 +43,7 @@ M.pickers = {
         sort_mru = true
     },
     current_buffer_fuzzy_find = { initial_mode = 'insert' },
-    registers = { initial_mode = 'insert' },
+    registers = { initial_mode = 'insert', layout_config = { width = 0.7, height = 0.1 } },
     builtin = { layout_config = { preview_height = 0.4 } },
     vim_options = { initial_mode = 'insert' },
     colorscheme = { layout_config = { width = 0.2, height = 0.7 } },

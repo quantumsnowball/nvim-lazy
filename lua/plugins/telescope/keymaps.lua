@@ -37,9 +37,6 @@ map('n', '<space>ss', tb.spell_suggest, { desc = 'telescope.spell_suggest()' })
 map('n', '<leader>v', tb.lsp_references, { desc = 'telescope.lsp_references()' })
 map('n', '<space>v', tb.lsp_references, { desc = 'telescope.lsp_references()' })
 map('n', 'gd', tb.lsp_definitions, { desc = 'telescope.lsp_definitions()' })
--- registers
--- map('n', '<leader>"', tb.registers, {desc= 'telescope.registers()'})
-map('n', '<space>"', tb.registers, { desc = 'telescope.registers()' })
 
 
 
@@ -64,6 +61,10 @@ end, { desc = 'telescope.live_grep(--everything)' })
 
 -- find tabpages
 -- map('n', 'T', tb.tabpages, { desc = 'telescope.tabpages()'})
+
+-- registers
+map('n', "<leader>F'", tb.registers, { desc = 'telescope.registers()' })
+map('n', "<space>F'", tb.registers, { desc = 'telescope.registers()' })
 
 -- find jumplist
 map('n', '<leader>Fj', tb.jumplist, { desc = 'telescope.jumplist()' })
@@ -96,10 +97,10 @@ map('n', '<leader>Fca', vim.lsp.buf.code_action, { desc = 'telescope.code_action
 map('n', '<leader>Fi', tb.highlights, { desc = 'telescope.highlights()' })
 
 -- treesitter objects
-map('n', '<leader>Fm', tb.treesitter, { desc = 'telescope.treesitter()' })
+map('n', '<leader>Fto', tb.treesitter, { desc = 'telescope.treesitter()' })
 
 -- marks
-map('n', '<leader>F\'', tb.marks, { desc = 'telescope.marks()' })
+map('n', '<leader>Fm', tb.marks, { desc = 'telescope.marks()' })
 
 -- list all telescop.builtin functions
 map('n', '<leader>Fp', tb.builtin, { desc = 'telescope.builtin()' })
