@@ -36,3 +36,8 @@ map('n', '<leader>qf', ':copen<cr>')
 -- close tabpages to the right
 map('n', 'q>', '<cmd>.+1,$tabdo :tabclose<cr>')
 map('n', 't>', '<cmd>.+1,$tabdo :tabclose<cr>')
+-- exit terminal insert mode easily
+map('t', '<c-h>', '<c-\\><c-n><c-w>h')
+map('t', '<c-j>', '<c-\\><c-n><c-w>j')
+map('t', '<c-k>', '<c-\\><c-n><c-w>k')
+map('t', '<c-l>', '<c-\\><c-n><c-w>l')
