@@ -8,8 +8,9 @@ vim.cmd('autocmd BufEnter * hi MatchParen ctermbg=Gray guibg=Gray')
 vim.cmd("autocmd BufEnter *.txt if &filetype == 'help' | silent wincmd T | endif")
 -- add margins when scrolling with curosr
 vim.opt.scrolloff = 5
--- set scroll=5 for normal buffer
-vim.cmd('autocmd BufEnter,WinScrolled * if &buftype == "" | set scroll=10 | endif')
+-- set scroll=10 for normal buffer, scroll more
+-- p.s. will fail for very short windows, therefore silent!
+vim.cmd('autocmd BufEnter,WinScrolled * if &buftype == "" | silent! set scroll=10 | endif')
 -- WipeReg
 vim.cmd('command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor')
 -- vim.cmd('autocmd VimEnter * WipeReg')

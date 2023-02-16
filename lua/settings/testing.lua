@@ -30,8 +30,8 @@ local run_nearest_pytest_function = function(arg)
     local path = cwd .. '::' .. pytest_fnname
     local command = 'pytest ' .. path
     if arg then command = command .. ' ' .. arg end
-    vim.cmd('split')
-    vim.cmd('horizontal resize 10')
+    vim.cmd('botright split')
+    vim.cmd('horizontal resize 7')
     vim.cmd('terminal ' .. command)
     vim.fn.feedkeys('G')
 end
