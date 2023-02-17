@@ -11,7 +11,7 @@ return function(name, neovim_caps)
     -- possible props:
     --   root_dir, name, filetypes, autostart,
     --   single_file_support, on_new_config, capabilities, cmd
-    --   handlers, init_options, settings, settings
+    --   handlers, init_options, settings
     -- p.s. search help for `lspconfig-setup`
     local loaded, configs = pcall(require, 'plugins.nvim-lspconfig.lsp.' .. name)
     if loaded then
