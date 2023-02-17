@@ -40,7 +40,7 @@ return {
             -- 3. to provide extra configs, create a module with the exact name and return the table
             -- TODO I can't print any message inside the config(), hard to debug vars. #debug
             local selected = {
-                'sumneko_lua',
+                'lua_ls',
                 'pyright',
                 'tsserver',
                 "cssls",
