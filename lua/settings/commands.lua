@@ -3,10 +3,12 @@ vim.api.nvim_create_user_command('MyGreeting', 'echo "Hello world!"', {})
 
 -- LSP
 vim.api.nvim_create_user_command('MyLSPServerCaps', function()
-    local clients = vim.lsp.get_active_clients()
-    for _, client in pairs(clients) do
-        print('LSP server capabilities: ' .. client.name)
-        print(vim.inspect(client.server_capabilities))
+    -- LSPs should be `servers`
+    -- may be think of these are wrapper clients attaching to each server
+    local wrappers = vim.lsp.get_active_clients()
+    for _, wrapper in pairs(wrappers) do
+        print('LSP server capabilities: ' .. wrapper.name)
+        print(vim.inspect(wrapper.server_capabilities))
     end
 end, {})
 vim.api.nvim_create_user_command('MyLSPClientCaps', function()
