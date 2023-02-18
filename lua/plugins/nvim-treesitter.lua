@@ -14,6 +14,7 @@ local selected_parser = {
     'toml',
     'yaml',
     'regex',
+    'comment',
     -- git
     'gitignore',
     'git_rebase',
