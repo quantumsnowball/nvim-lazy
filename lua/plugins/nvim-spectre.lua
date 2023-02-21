@@ -4,14 +4,14 @@ return {
     "windwp/nvim-spectre",
     -- stylua: ignore
     keys = {
-        { "<leader>sr", function()
-            require("spectre").setup { open_cmd = 'new' }
-            require("spectre").open()
-        end, desc = "Replace in files (Spectre)" },
-        { "<leader>SR", function()
-            require("spectre").setup { open_cmd = 'vnew' }
-            require("spectre").open()
-        end, desc = "Replace in files (Spectre)" },
+        -- { "<leader>sr", function()
+        --     require("spectre").setup { open_cmd = 'new' }
+        --     require("spectre").open()
+        -- end, desc = "Replace in files (Spectre)" },
+        -- { "<leader>SR", function()
+        --     require("spectre").setup { open_cmd = 'vnew' }
+        --     require("spectre").open()
+        -- end, desc = "Replace in files (Spectre)" },
         -- { "<leader>sr", function()
         --     require("spectre").setup { open_cmd = 'new' }
         --     require("spectre").open_visual()
@@ -34,6 +34,10 @@ return {
         -- open_visual is delayed by one if setting up using keys props
         -- temp fix: setup keymaps using vim cmd
         --
+        -- step: open, pull to far bottom, enter insert
+        vim.cmd "nnoremap <leader>sr :lua require('spectre').open()<CR><c-w>Ji"
+        -- step: copy, restore selection, open_visual, pull to far right, enter insert, paste from " register
+        vim.cmd "nnoremap <leader>SR :lua require('spectre').open()<CR><c-w>Li"
         -- step: copy, restore selection, open_visual, pull to far bottom, enter insert, paste from " register
         vim.cmd "vnoremap <leader>sr ygv<esc>:lua require('spectre').open_visual()<CR><c-w>Jjji<c-r>\""
         -- step: copy, restore selection, open_visual, pull to far right, enter insert, paste from " register
