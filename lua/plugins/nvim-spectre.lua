@@ -34,9 +34,9 @@ return {
         -- open_visual is delayed by one if setting up using keys props
         -- temp fix: setup keymaps using vim cmd
         --
-        -- step: open_visual, pull to far bottom
-        vim.cmd "vnoremap <leader>sr <esc>:lua require('spectre').open_visual()<CR><c-w>J"
-        -- step: open_visual, pull to far right
-        vim.cmd "vnoremap <leader>SR <esc>:lua require('spectre').open_visual()<CR><c-w>L"
+        -- step: copy, restore selection, open_visual, pull to far bottom, enter insert, paste from " register
+        vim.cmd "vnoremap <leader>sr ygv<esc>:lua require('spectre').open_visual()<CR><c-w>Jjji<c-r>\""
+        -- step: copy, restore selection, open_visual, pull to far right, enter insert, paste from " register
+        vim.cmd "vnoremap <leader>SR ygv<esc>:lua require('spectre').open_visual()<CR><c-w>Ljji<c-r>\""
     end
 }
