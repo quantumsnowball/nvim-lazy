@@ -54,5 +54,5 @@ map('v', 'zj', '""y`>""p`[V`]') -- block above
 map('n', 'yj', 'yy')
 map('n', 'yk', 'yy')
 -- `'` as register operator, `gm` as go to mark
-map('n', "'", '"')
-map('n', 'zm', "'")
+map({ 'n', 'v' }, "'", '"')
+map({ 'n', 'v' }, 'zm', "'")
