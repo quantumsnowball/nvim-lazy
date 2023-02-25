@@ -58,6 +58,7 @@ M.pickers = {
     },
     lsp_references = {
         jump_type = 'never',
+        include_current_line = true,
     }
 }
 
