@@ -11,7 +11,7 @@ local opts = {
                 },
                 {
                     id = "stacks",
-                    size = 0.25
+                    size = 0.15
                 },
                 {
                     id = "scopes",
@@ -19,7 +19,7 @@ local opts = {
                 },
                 {
                     id = "watches",
-                    size = 0.15
+                    size = 0.25
                 },
             },
             position = "left",
