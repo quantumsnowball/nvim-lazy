@@ -46,6 +46,17 @@ local run_current_pytest_file = function(arg)
     vim.fn.feedkeys('G')
 end
 
+local run_current_python_file = function(arg)
+    local cwd = vim.fn.expand('%')
+    local command = 'python'
+    if arg then command = command .. ' ' .. arg end
+    command = command .. ' ' .. cwd
+    vim.cmd('botright split')
+    vim.cmd('horizontal resize 7')
+    vim.cmd('terminal ' .. command)
+    vim.fn.feedkeys('G')
+end
+
 -- current function
 map('n', ';t',
     function() run_nearest_pytest_function('--workers auto') end,
@@ -72,3 +83,15 @@ map('n', ';TW',
 map('n', ';Tf',
     function() run_current_pytest_file('--workers auto') end,
     { desc = 'run current pytest file (parallel)' })
+map('n', ';r',
+    function() run_current_python_file() end,
+    { desc = 'run current python file' })
+map('n', ';Tp',
+    function() run_current_python_file() end,
+    { desc = 'run current python file' })
+map('n', ';R',
+    function() run_current_python_file('-i') end,
+    { desc = 'run current python file interactively' })
+map('n', ';TP',
+    function() run_current_python_file('-i') end,
+    { desc = 'run current python file interactively' })
