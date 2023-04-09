@@ -8,10 +8,10 @@ return {
         require('four-seasons').setup({ palette = require('four-seasons').spring })
         -- theme variants
         local themes = {
-            'four-seasons-spring',
-            'four-seasons-summer',
-            'four-seasons-autumn',
-            'four-seasons-winter',
+            'FourSeasonsSpring',
+            'FourSeasonsSummer',
+            'FourSeasonsAutumn',
+            'FourSeasonsWinter',
         }
         -- default theme
         local id = 4
