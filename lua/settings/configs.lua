@@ -5,7 +5,7 @@ vim.cmd('syntax on')
 -- match parenthesizes formatting
 vim.cmd('autocmd BufEnter * hi MatchParen ctermbg=Gray guibg=Gray')
 -- always open help in a new tab
-vim.cmd("autocmd BufEnter *.txt if &filetype == 'vimdoc' | silent wincmd T | endif")
+vim.cmd("autocmd BufEnter *.txt if &filetype == 'help' || &filetype == 'vimdoc' | silent wincmd T | endif")
 -- add margins when scrolling with curosr
 vim.opt.scrolloff = 5
 -- set scroll=10 for normal buffer, scroll more
