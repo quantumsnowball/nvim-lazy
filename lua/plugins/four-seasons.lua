@@ -2,7 +2,7 @@ return {
     'quantumsnowball/four-seasons.nvim',
     branch = 'dev',
     url = 'git@github.com:quantumsnowball/four-seasons.nvim.git',
-    event = 'VimEnter',
+    -- event = 'VimEnter',
     config = function()
         -- load
         require('four-seasons').setup({ palette = require('four-seasons').spring })
