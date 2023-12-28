@@ -39,7 +39,11 @@ return {
             -- show_current_context = true,
             -- show_current_context_start = true,
             indent = { highlight = highlight },
-            scope = { enabled = true }
+            scope = {
+                enabled = true,
+                char = '󱋱',
+                highlight = { "Function", "Label" },
+            }
         }
         -- wrapped lines follow indentation
         vim.opt.breakindent = true
