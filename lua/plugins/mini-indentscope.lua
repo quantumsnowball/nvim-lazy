@@ -12,7 +12,7 @@ return {
     },
     config = function(_, opts)
         vim.api.nvim_create_autocmd("FileType", {
-            pattern = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy", "mason", "NvimTree" },
+            pattern = { "vimdoc", "alpha", "dashboard", "neo-tree", "Trouble", "lazy", "mason", "NvimTree" },
             callback = function()
                 vim.b.miniindentscope_disable = true
             end,

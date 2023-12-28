@@ -2,7 +2,7 @@ local selected_parser = {
     -- neovim
     'lua',
     'vim',
-    'help',
+    'vimdoc',
     -- general
     'make',
     'bash',
