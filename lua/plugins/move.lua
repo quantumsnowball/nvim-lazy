@@ -5,6 +5,10 @@ return {
     config = function()
         local map = require('utils').map
         local opts = { silent = true }
+
+        -- enable the plugin
+        require('move').setup({})
+
         -- Normal-mode
         map('n', '<C-down>', ':MoveLine(1)<CR>', opts)
         map('n', '<C-up>', ':MoveLine(-1)<CR>', opts)
