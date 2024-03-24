@@ -16,7 +16,9 @@ return {
                 "BufferLineIndicatorSelected",
             },
             exclude_groups = {
-                "MatchParen"
+                "MatchParen",
+                "CursorLine",
+                "CursorColumn",
             }, -- table: groups you don't want to clear
         })
         -- custom key bindings
