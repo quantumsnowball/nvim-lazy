@@ -5,6 +5,7 @@ return {
     dependencies = {
         'kyazdani42/nvim-web-devicons'
     },
+    event = 'VeryLazy',
     config = function()
         vim.opt.termguicolors = true
         require("bufferline").setup {
