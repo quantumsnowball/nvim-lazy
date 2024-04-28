@@ -2,6 +2,7 @@
 -- https://github.com/nvim-pack/nvim-spectre
 return {
     "windwp/nvim-spectre",
+    event = 'VeryLazy',
     opts = {
         mapping = {
             ['run_current_replace'] = {
