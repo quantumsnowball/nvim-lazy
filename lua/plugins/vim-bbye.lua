@@ -2,6 +2,7 @@
 -- https://github.com/kazhala/close-buffers.nvim
 return {
     'moll/vim-bbye',
+    event = 'VeryLazy',
     dependencies = 'kazhala/close-buffers.nvim',
     config = function()
         local map = require('utils').map

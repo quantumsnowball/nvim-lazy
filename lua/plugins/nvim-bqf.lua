@@ -2,6 +2,7 @@
 -- https://github.com/kevinhwang91/nvim-bqf
 return {
     'kevinhwang91/nvim-bqf',
+    event = 'VeryLazy',
     ft = 'qf', -- filetype
     config = function()
         -- official recommended settings
@@ -42,7 +43,7 @@ return {
             },
             filter = {
                 fzf = {
-                    action_for = { ['ctrl-s'] = 'split',['ctrl-t'] = 'tab drop' },
+                    action_for = { ['ctrl-s'] = 'split', ['ctrl-t'] = 'tab drop' },
                     extra_opts = { '--bind', 'ctrl-o:toggle-all', '--prompt', '> ' }
                 }
             }

@@ -2,6 +2,7 @@
 -- https://github.com/fedepujol/move.nvim
 return {
     'fedepujol/move.nvim',
+    event = 'VeryLazy',
     config = function()
         local map = require('utils').map
         local opts = { silent = true }

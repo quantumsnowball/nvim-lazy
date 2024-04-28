@@ -2,9 +2,9 @@
 -- https://github.com/quantumsnowball/telescope-tabman.nvim
 return {
     'quantumsnowball/telescope-tabman.nvim',
+    event = 'VeryLazy',
     branch = 'dev',
     dependencies = 'nvim-telescope/telescope.nvim',
-    event = 'VeryLazy',
     config = function()
         local tele = require('telescope')
         local tabman = tele.extensions.tabman.tabman

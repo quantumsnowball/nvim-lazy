@@ -2,6 +2,7 @@
 -- https://github.com/tpope/vim-sleuth
 return {
     'tpope/vim-sleuth',
+    event = 'VeryLazy',
     config = function()
         -- default neovim tabsize to 4 space
         vim.opt.tabstop = 4

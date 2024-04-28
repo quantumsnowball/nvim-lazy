@@ -2,6 +2,7 @@
 -- https://github.com/lewis6991/gitsigns.nvim
 return {
     'lewis6991/gitsigns.nvim',
+    event = 'VimEnter',
     config = function()
         require('gitsigns').setup({
             on_attach = function(bufnr)

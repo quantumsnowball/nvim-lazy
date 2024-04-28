@@ -10,6 +10,7 @@
 -- https://github.com/ggandor/leap.nvim
 return {
     'ggandor/leap.nvim',
+    event = 'VeryLazy',
     config = function()
         require('leap').set_default_keymaps()
         require('leap').setup {

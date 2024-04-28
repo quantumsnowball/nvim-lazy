@@ -47,11 +47,11 @@ local opts = {
 
 return {
     'rcarriga/nvim-dap-ui',
+    event = 'VeryLazy',
     dependencies = {
         "mfussenegger/nvim-dap",
         "nvim-neotest/nvim-nio"
     },
-    event = 'VeryLazy',
     keys = {
         { '<F7>', function() require('dapui').toggle({ reset = true }) end, desc = 'nvim-dap-ui.toggle()' },
     },

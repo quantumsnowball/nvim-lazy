@@ -2,6 +2,7 @@
 -- https://github.com/goolord/alpha-nvim
 return {
     'goolord/alpha-nvim',
+    event = 'VimEnter',
     dependencies = { 'kyazdani42/nvim-web-devicons' },
     config = function()
         local dashboard = require("alpha.themes.dashboard")
@@ -25,7 +26,7 @@ return {
 
         -- Set menu
         dashboard.section.buttons.val = {
-            { type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+            { type = "text",    val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
             { type = "padding", val = 1 },
             dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
             dashboard.button("r", "  > Recent",

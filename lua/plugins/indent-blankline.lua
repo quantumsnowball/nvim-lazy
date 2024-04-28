@@ -2,6 +2,7 @@
 -- https://github.com/lukas-reineke/indent-blankline.nvim
 return {
     'lukas-reineke/indent-blankline.nvim',
+    event = 'VeryLazy',
     main = 'ibl',
     config = function()
         -- show space and end-of-line
