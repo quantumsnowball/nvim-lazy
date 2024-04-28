@@ -2,7 +2,7 @@
 -- https://github.com/b0o/incline.nvim
 return {
     'b0o/incline.nvim',
-    event = 'VeryLazy',
+    lazy = true,
     config = function()
         -- define its own highligh group
         vim.cmd [[ autocmd VimEnter,ColorScheme * hi InclineActive guifg=#deff00 guibg=#555555 gui=bold ]]
