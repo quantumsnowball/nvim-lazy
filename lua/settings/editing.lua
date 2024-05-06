@@ -27,6 +27,9 @@ map('n', '\\', 'i<C-m><esc>')
 -- go and gO will open new line but stay in normal mode
 map('n', 'gO', 'O<esc>')
 map('n', 'go', 'o<esc>')
+-- g, and g. insert space before/after cursor
+map('n', 'g,', 'i<space><esc><right>')
+map('n', 'g.', 'a<space><esc><left>')
 -- C-o will also open new line in insert mode
 map('i', '<C-o>', '<esc>o')
 -- toggle spell checking
