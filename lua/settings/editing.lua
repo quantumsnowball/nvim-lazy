@@ -30,6 +30,15 @@ map('n', 'go', 'o<esc>')
 -- g, and g. insert space before/after cursor
 map('n', 'g,', 'i<space><esc><right>')
 map('n', 'g.', 'a<space><esc><left>')
+-- g), g], g} insert closing pair match at line end in normal mode
+map('n', 'g)', '$a)<esc>')
+map('n', 'g0', '$a)<esc>') -- shorthand for )
+map('n', 'g]', '$a]<esc>')
+map('n', 'g}', '$a}<esc>')
+map('n', "g'", "$a'<esc>")
+map('n', 'g"', '$a"<esc>')
+-- g; insert : at the end of line
+map('n', 'g;', 'A:<esc>')
 -- C-o will also open new line in insert mode
 map('i', '<C-o>', '<esc>o')
 -- toggle spell checking
