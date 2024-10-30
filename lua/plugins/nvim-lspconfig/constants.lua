@@ -3,7 +3,7 @@ local M = {}
 M.ensure_installed = {
     "lua_ls", -- "sumneko_lua",
     "pyright",
-    "tsserver",
+    "ts_ls", -- "tsserver",
     "cssls",
     "jsonls",
     "html",

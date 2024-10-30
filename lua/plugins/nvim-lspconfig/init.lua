@@ -42,7 +42,7 @@ return {
             local selected = {
                 'lua_ls',
                 'pyright',
-                'tsserver',
+                'ts_ls', -- 'tsserver'
                 "cssls",
                 "jsonls",
                 "html",
