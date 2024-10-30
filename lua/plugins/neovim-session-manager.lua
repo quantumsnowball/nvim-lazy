@@ -20,7 +20,7 @@ return {
                 local bufs = vim.api.nvim_list_bufs()
                 local bufs_n = #bufs
                 local buf_id = bufs[1]
-                vim.print(buf_id)
+                -- vim.print(buf_id)
                 local buffer_name = vim.api.nvim_buf_get_name(buf_id)
                 if bufs_n == 1 and buffer_name == '' then
                     vim.cmd('Alpha')
