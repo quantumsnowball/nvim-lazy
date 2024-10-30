@@ -11,6 +11,7 @@ return {
         -- toggle space and eol chars
         vim.opt.list = false
         require('utils').map('n', '<F6>', ':set list!<CR>')
+        require('utils').map('n', '<space>`', ':set list!<CR>')
         -- colors
         local highlight = {
             "RainbowRed",
