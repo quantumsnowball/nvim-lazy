@@ -16,6 +16,7 @@ map('n', '<leader><leader>', ':wa<cr>')
 map('n', '<F1>', ':WhichKey<cr>', { silent = true })
 -- cancel search highlight after search
 map('n', 'zi', ':noh<cr>', { desc = 'Clear search result highlight' })
+map('n', 'z/', ':noh<cr>', { desc = 'Clear search result highlight' })
 -- G and gg also center line
 map('n', 'G', 'Gzz')
 map('n', 'gg', 'ggzz')
