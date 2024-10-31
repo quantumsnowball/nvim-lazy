@@ -21,8 +21,8 @@ map('i', '<C-h>', '<home>')
 map('i', '<C-l>', '<end>')
 -- shift-tab will go one tab backward
 map('i', '<S-Tab>', '<C-d>')
--- | and \ will break line before and after cursor
-map('n', '|', 'a<C-m><esc>')
+-- \ break line, | reverse break line
+map('n', '|', 'i<C-m><esc>:MoveLine(-1)<CR>')
 map('n', '\\', 'i<C-m><esc>')
 -- go and gO will open new line but stay in normal mode
 map('n', 'gO', 'O<esc>')
