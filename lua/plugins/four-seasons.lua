@@ -1,7 +1,7 @@
 return {
     'quantumsnowball/four-seasons.nvim',
     branch = 'dev',
-    url = 'git@github.com:quantumsnowball/four-seasons.nvim.git',
+    -- url = 'git@github.com:quantumsnowball/four-seasons.nvim.git',
     dependencies = 'b0o/incline.nvim',
     config = function()
         -- load
