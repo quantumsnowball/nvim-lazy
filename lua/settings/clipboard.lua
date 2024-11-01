@@ -56,12 +56,25 @@ map('n', 'yk', 'yy')
 -- `'` as register operator, `gm` as go to mark
 map({ 'n', 'v' }, "'", '"')
 map({ 'n', 'v' }, 'zm', "'")
--- copy/paste combos
+-- copy/paste helpers
+local function parse_range(opts)
+    -- with nargs = '+', at least one arg is supplied
+    local arg1 = tonumber(opts.fargs[1])
+
+    if not opts.fargs[2] then
+        -- single line
+        return arg1
+    else
+        -- range of lines
+        local arg2 = tonumber(opts.fargs[2])
+        return arg1 .. ',' .. arg2
+    end
+end
 vim.api.nvim_create_user_command('YankPutBefore', function(opts)
-    vim.cmd('' .. opts.args .. 'yank | put!')
-end, { nargs = 1 })
+    vim.cmd('' .. parse_range(opts) .. 'yank | put!')
+end, { nargs = '+' })
 vim.api.nvim_create_user_command('YankPutAfter', function(opts)
-    vim.cmd('' .. opts.args .. 'yank | put')
-end, { nargs = 1 })
+    vim.cmd('' .. parse_range(opts) .. 'yank | put')
+end, { nargs = '+' })
 map('n', 'yP', ':YankPutBefore ')
 map('n', 'yp', ':YankPutAfter ')
