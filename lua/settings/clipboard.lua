@@ -45,9 +45,9 @@ map('n', 'daa', 'ggVG"_d', { desc = 'delete all text' })
 map('n', '<leader>daa', 'ggVGd', { desc = 'cut all text' })
 map('n', 'caa', 'ggVG"_c', { desc = 'change all text' })
 -- copy/duplicate lines/block above/below
-map('n', 'zk', '""yy""P^') -- line above
+map('n', 'zk', '""yy""P^')      -- line above
 map('v', 'zk', '""y`<""P`[V`]') -- block above
-map('n', 'zj', '""yy""p$') -- line below
+map('n', 'zj', '""yy""p$')      -- line below
 map('v', 'zj', '""y`>""p`[V`]') -- block above
 -- #debug yy is delay, yj/yk somethings will copy the adjacent lines
 -- temp fix map all mistake key to copy line
@@ -57,7 +57,11 @@ map('n', 'yk', 'yy')
 map({ 'n', 'v' }, "'", '"')
 map({ 'n', 'v' }, 'zm', "'")
 -- copy/paste combos
-vim.api.nvim_create_user_command('YankPaste', function(opts)
+vim.api.nvim_create_user_command('YankPutBefore', function(opts)
+    vim.cmd('' .. opts.args .. 'yank | put!')
+end, { nargs = 1 })
+vim.api.nvim_create_user_command('YankPutAfter', function(opts)
     vim.cmd('' .. opts.args .. 'yank | put')
 end, { nargs = 1 })
-map('n', 'yp', ':YankPaste ')
+map('n', 'yP', ':YankPutBefore ')
+map('n', 'yp', ':YankPutAfter ')
