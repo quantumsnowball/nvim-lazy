@@ -56,3 +56,8 @@ map('n', 'yk', 'yy')
 -- `'` as register operator, `gm` as go to mark
 map({ 'n', 'v' }, "'", '"')
 map({ 'n', 'v' }, 'zm', "'")
+-- copy/paste combos
+vim.api.nvim_create_user_command('YankPaste', function(opts)
+    vim.cmd('' .. opts.args .. 'yank | put')
+end, { nargs = 1 })
+map('n', 'yp', ':YankPaste ')
