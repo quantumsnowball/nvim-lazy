@@ -4,8 +4,6 @@ return {
     -- url = 'git@github.com:quantumsnowball/four-seasons.nvim.git',
     -- dependencies = 'b0o/incline.nvim',
     config = function()
-        -- load
-        require('four-seasons').setup({ palette = require('four-seasons').spring })
         -- theme variants
         local themes = {
             'FourSeasonsSpring',
