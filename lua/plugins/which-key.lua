@@ -14,7 +14,7 @@ return {
             },
             plugins = {
                 marks = false,
-                registers = false,
+                registers = true,
             },
             win = {
                 height = { min = 4, max = 10 },
